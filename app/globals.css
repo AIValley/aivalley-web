@@ -152,9 +152,6 @@
       Menlo, Consolas, "Liberation Mono", monospace;
   }
 
-  .animate-glow {
-    animation: glow-pulse 7s ease-in-out infinite;
-  }
 }
 
 @keyframes gradient-x {
@@ -164,16 +161,6 @@
   }
   50% {
     background-position: 100% 50%;
-  }
-}
-
-@keyframes glow-pulse {
-  0%,
-  100% {
-    opacity: 0.55;
-  }
-  50% {
-    opacity: 1;
   }
 }
 
@@ -266,8 +253,7 @@
   html {
     scroll-behavior: auto;
   }
-  .text-gradient,
-  .animate-glow {
+  .text-gradient {
     animation: none;
   }
 }
