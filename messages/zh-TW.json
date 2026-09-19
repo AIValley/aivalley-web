@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "AI Valley · AI 資源中心",
+    "description": "發現並收藏精選的 AI 工具、模型、Agent 與學習資源。"
+  },
+  "nav": {
+    "home": "首頁",
+    "explore": "瀏覽",
+    "blog": "部落格",
+    "about": "關於"
+  },
+  "header": {
+    "dashboard": "儀表板",
+    "favorites": "我的收藏",
+    "submit": "提交資源",
+    "login": "登入",
+    "logout": "登出",
+    "admin": "管理後台"
+  },
+  "theme": {
+    "toLight": "切換到淺色模式",
+    "toDark": "切換到深色模式"
+  },
+  "hero": {
+    "badge": "精選 · 雙語 · 持續更新",
+    "title": "發現最好的",
+    "titleHighlight": "AI 資源",
+    "subtitle": "聚合精選的 AI 工具、模型、Agent 與學習資料，幫你快速找到對的那一個。",
+    "searchPlaceholder": "搜尋工具、模型、Agent 或學習資源…",
+    "browseAll": "瀏覽全部資源",
+    "submit": "提交資源"
+  },
+  "home": {
+    "featuredTitle": "精選推薦",
+    "featuredSubtitle": "編輯精選的高品質 AI 資源",
+    "viewAll": "查看全部",
+    "browseByType": "按類型瀏覽",
+    "stats": {
+      "resources": "資源總數",
+      "tools": "AI 工具",
+      "models": "AI 模型",
+      "agents": "Agent",
+      "learning": "學習資料"
+    }
+  },
+  "explore": {
+    "title": "瀏覽資源",
+    "subtitle": "搜尋、篩選，找到你需要的 AI 資源",
+    "searchPlaceholder": "搜尋名稱、描述或標籤…",
+    "type": "類型",
+    "category": "分類",
+    "pricing": "價格",
+    "sort": "排序",
+    "all": "全部",
+    "sortFeatured": "精選優先",
+    "sortName": "按名稱",
+    "tabTrending": "熱門",
+    "tabFeatured": "精選",
+    "tabRecent": "最新",
+    "results": "{count} 個資源",
+    "empty": "沒有找到符合的資源，試試換個關鍵字或篩選條件。"
+  },
+  "detail": {
+    "visit": "造訪網站",
+    "type": "類型",
+    "category": "分類",
+    "pricing": "價格",
+    "tags": "標籤",
+    "related": "相關資源",
+    "back": "返回"
+  },
+  "favorite": {
+    "add": "收藏",
+    "added": "已收藏",
+    "loginPrompt": "登入後即可收藏"
+  },
+  "favorites": {
+    "title": "我的收藏",
+    "subtitle": "你收藏的所有資源",
+    "empty": "還沒有收藏任何資源，去瀏覽頁看看吧。",
+    "browse": "去瀏覽"
+  },
+  "submit": {
+    "title": "提交資源",
+    "subtitle": "推薦一個值得收錄的 AI 資源，審核通過後會上架。",
+    "nameEn": "名稱（英文）",
+    "nameZh": "名稱（中文）",
+    "descEn": "介紹（英文）",
+    "descZh": "介紹（中文）",
+    "url": "官網連結",
+    "type": "類型",
+    "category": "分類",
+    "pricing": "價格",
+    "tags": "標籤（用逗號分隔）",
+    "submit": "提交",
+    "submitting": "提交中…",
+    "success": "提交成功！審核通過後會上架。",
+    "error": "提交失敗，請稍後重試。",
+    "loginRequired": "登入後才能提交資源",
+    "loginCta": "去登入",
+    "spec": "參數",
+    "platform": "平台",
+    "apiAccess": "API 接口",
+    "provider": "廠商",
+    "openSource": "開源",
+    "contextWindow": "上下文視窗",
+    "modalities": "模態",
+    "agentKind": "型態",
+    "author": "作者",
+    "version": "版本",
+    "trigger": "觸發方式",
+    "level": "難度",
+    "format": "型態"
+  },
+  "blog": {
+    "title": "部落格 · 資訊",
+    "subtitle": "關於 AI 的精選文章與觀察",
+    "readMore": "閱讀全文",
+    "backToList": "返回部落格"
+  },
+  "login": {
+    "title": "登入",
+    "registerTitle": "註冊",
+    "email": "電子郵件",
+    "password": "密碼",
+    "name": "暱稱（選填）",
+    "submit": "登入",
+    "register": "註冊",
+    "switchToRegister": "還沒有帳號？註冊一個",
+    "switchToLogin": "已有帳號？去登入",
+    "error": "電子郵件或密碼不正確",
+    "registerError": "註冊失敗，該電子郵件可能已被使用",
+    "loggedIn": "已登入"
+  },
+  "admin": {
+    "title": "管理後台",
+    "subtitle": "審核待上架的提交資源",
+    "pendingTitle": "待審核資源",
+    "noPending": "沒有待審核的資源。",
+    "approve": "通過",
+    "reject": "駁回",
+    "submittedBy": "提交者",
+    "notAdmin": "你沒有權限造訪此頁面"
+  },
+  "dashboard": {
+    "title": "儀表板",
+    "backToSite": "返回網站",
+    "nav": {
+      "overview": "概覽",
+      "submissions": "我的提交",
+      "favorites": "收藏管理",
+      "account": "帳號設定",
+      "resources": "資源管理",
+      "review": "審核",
+      "users": "使用者管理",
+      "taxonomy": "分類與選項"
+    },
+    "overview": {
+      "title": "概覽",
+      "subtitle": "你的活動一覽",
+      "submissions": "我的提交",
+      "pending": "待審核",
+      "published": "已上架",
+      "rejected": "已駁回",
+      "favorites": "收藏數"
+    },
+    "status": {
+      "PENDING": "待審核",
+      "PUBLISHED": "已上架",
+      "REJECTED": "已駁回"
+    },
+    "submissions": {
+      "title": "我的提交",
+      "subtitle": "查看你提交的資源及審核狀態",
+      "empty": "你還沒有提交過資源。",
+      "withdraw": "撤回",
+      "edit": "編輯",
+      "resubmit": "重新提交",
+      "delete": "刪除",
+      "cancel": "取消",
+      "updated": "已更新並重新提交審核。",
+      "notFound": "找不到該提交，或無權操作。",
+      "confirmWithdraw": "確定撤回這條提交嗎？"
+    },
+    "favorites": {
+      "title": "收藏管理",
+      "subtitle": "點擊卡片上的心形按鈕即可取消收藏",
+      "empty": "還沒有收藏任何資源。"
+    },
+    "account": {
+      "title": "帳號設定",
+      "subtitle": "管理你的帳號資訊",
+      "profile": "個人資料",
+      "name": "暱稱",
+      "save": "儲存",
+      "saved": "資料已儲存。",
+      "password": "修改密碼",
+      "currentPassword": "目前密碼",
+      "newPassword": "新密碼",
+      "changePassword": "更新密碼",
+      "wrongPassword": "目前密碼不正確",
+      "passwordTooShort": "新密碼至少 6 位",
+      "passwordSaved": "密碼已更新。"
+    },
+    "resources": {
+      "title": "資源管理",
+      "subtitle": "對所有資源進行增刪改查",
+      "create": "新增資源",
+      "edit": "編輯",
+      "delete": "刪除",
+      "cancel": "取消",
+      "featured": "設為精選",
+      "created": "資源已建立。",
+      "updated": "資源已更新。",
+      "confirmDelete": "確定刪除該資源嗎？"
+    },
+    "review": {
+      "title": "審核",
+      "subtitle": "審核使用者提交的資源"
+    },
+    "users": {
+      "title": "使用者管理",
+      "subtitle": "查看使用者並管理角色",
+      "email": "電子郵件",
+      "role": "角色",
+      "makeAdmin": "設為管理員",
+      "makeUser": "設為一般使用者",
+      "delete": "刪除",
+      "confirmDelete": "確定刪除該使用者嗎？",
+      "roleUser": "一般使用者",
+      "roleAdmin": "管理員"
+    },
+    "taxonomy": {
+      "title": "分類與選項",
+      "subtitle": "管理資源類型、分類、價格與狀態的取值及多語言標籤",
+      "kinds": {
+        "type": "類型",
+        "category": "分類",
+        "pricing": "價格",
+        "status": "狀態"
+      },
+      "add": "新增選項",
+      "edit": "編輯",
+      "save": "儲存",
+      "cancel": "取消",
+      "delete": "刪除",
+      "value": "值",
+      "valueHint": "唯一標識（如 tool、chat、free），建立後不可修改",
+      "sortOrder": "排序",
+      "active": "啟用",
+      "labels": "多語言標籤",
+      "confirmDelete": "確定刪除此選項嗎？",
+      "invalid": "選項值無效或格式不正確",
+      "duplicate": "該分類下已存在相同的值",
+      "created": "選項已建立。",
+      "saved": "選項已儲存。",
+      "deleted": "選項已刪除。",
+      "protected": "該狀態是審核流程必需項，不可刪除。",
+      "inUse": "該選項仍被資源引用，無法刪除。"
+    }
+  },
+  "about": {
+    "title": "關於 AI Valley",
+    "content": "AI Valley 是一個精心整理的 AI 資源中心，聚合工具、模型、Agent 與學習資料，幫助你更快發現和上手 AI。"
+  },
+  "footer": {
+    "tagline": "一個精心整理的 AI 資源中心",
+    "rights": "保留所有權利"
+  },
+  "common": {
+    "notFound": "頁面不存在",
+    "backHome": "返回首頁"
+  }
+}

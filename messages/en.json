@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "AI Valley · AI Resource Hub",
+    "description": "Discover and save hand-picked AI tools, models, agents and learning resources."
+  },
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "header": {
+    "dashboard": "Dashboard",
+    "favorites": "Favorites",
+    "submit": "Submit",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "admin": "Admin"
+  },
+  "theme": {
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "hero": {
+    "badge": "Curated · Bilingual · Updated",
+    "title": "Discover the best",
+    "titleHighlight": "AI resources",
+    "subtitle": "A curated collection of AI tools, models, agents and learning materials — find the right one, fast.",
+    "searchPlaceholder": "Search tools, models, agents or learning resources…",
+    "browseAll": "Browse all resources",
+    "submit": "Submit a resource"
+  },
+  "home": {
+    "featuredTitle": "Featured",
+    "featuredSubtitle": "Hand-picked, high-quality AI resources",
+    "viewAll": "View all",
+    "browseByType": "Browse by type",
+    "stats": {
+      "resources": "Resources",
+      "tools": "AI Tools",
+      "models": "AI Models",
+      "agents": "Agents",
+      "learning": "Learning"
+    }
+  },
+  "explore": {
+    "title": "Explore resources",
+    "subtitle": "Search and filter to find the AI resource you need",
+    "searchPlaceholder": "Search name, description or tags…",
+    "type": "Type",
+    "category": "Category",
+    "pricing": "Pricing",
+    "sort": "Sort",
+    "all": "All",
+    "sortFeatured": "Featured first",
+    "sortName": "By name",
+    "tabTrending": "Trending",
+    "tabFeatured": "Featured",
+    "tabRecent": "Recent",
+    "results": "{count, plural, one {# resource} other {# resources}}",
+    "empty": "No resources matched. Try a different keyword or filter."
+  },
+  "detail": {
+    "visit": "Visit website",
+    "type": "Type",
+    "category": "Category",
+    "pricing": "Pricing",
+    "tags": "Tags",
+    "related": "Related resources",
+    "back": "Back"
+  },
+  "favorite": {
+    "add": "Save",
+    "added": "Saved",
+    "loginPrompt": "Sign in to save"
+  },
+  "favorites": {
+    "title": "My favorites",
+    "subtitle": "All the resources you have saved",
+    "empty": "You haven't saved any resources yet. Browse the hub to get started.",
+    "browse": "Browse"
+  },
+  "submit": {
+    "title": "Submit a resource",
+    "subtitle": "Recommend an AI resource worth listing. It will go live after review.",
+    "nameEn": "Name (English)",
+    "nameZh": "Name (Chinese)",
+    "descEn": "Description (English)",
+    "descZh": "Description (Chinese)",
+    "url": "Website URL",
+    "type": "Type",
+    "category": "Category",
+    "pricing": "Pricing",
+    "tags": "Tags (comma separated)",
+    "submit": "Submit",
+    "submitting": "Submitting…",
+    "success": "Submitted! It will appear in Explore once approved.",
+    "error": "Submission failed. Please try again later.",
+    "loginRequired": "Sign in to submit a resource",
+    "loginCta": "Sign in",
+    "spec": "Parameters",
+    "platform": "Platform",
+    "apiAccess": "API access",
+    "provider": "Provider",
+    "openSource": "Open source",
+    "contextWindow": "Context window",
+    "modalities": "Modalities",
+    "agentKind": "Kind",
+    "author": "Author",
+    "version": "Version",
+    "trigger": "Trigger",
+    "level": "Level",
+    "format": "Format"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Curated articles and observations about AI",
+    "readMore": "Read more",
+    "backToList": "Back to blog"
+  },
+  "login": {
+    "title": "Sign in",
+    "registerTitle": "Sign up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name (optional)",
+    "submit": "Sign in",
+    "register": "Sign up",
+    "switchToRegister": "No account? Create one",
+    "switchToLogin": "Already have an account? Sign in",
+    "error": "Incorrect email or password",
+    "registerError": "Sign up failed. That email may already be in use.",
+    "loggedIn": "Signed in"
+  },
+  "admin": {
+    "title": "Admin",
+    "subtitle": "Review submitted resources",
+    "pendingTitle": "Pending review",
+    "noPending": "No resources pending review.",
+    "approve": "Approve",
+    "reject": "Reject",
+    "submittedBy": "Submitted by",
+    "notAdmin": "You don't have permission to view this page"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "backToSite": "Back to site",
+    "nav": {
+      "overview": "Overview",
+      "submissions": "Submissions",
+      "favorites": "Favorites",
+      "account": "Account",
+      "resources": "Resources",
+      "review": "Review",
+      "users": "Users",
+      "taxonomy": "Categories & Options"
+    },
+    "overview": {
+      "title": "Overview",
+      "subtitle": "A summary of your activity",
+      "submissions": "Submissions",
+      "pending": "Pending",
+      "published": "Published",
+      "rejected": "Rejected",
+      "favorites": "Favorites"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "PUBLISHED": "Published",
+      "REJECTED": "Rejected"
+    },
+    "submissions": {
+      "title": "My submissions",
+      "subtitle": "View your submitted resources and their status",
+      "empty": "You haven't submitted any resources yet.",
+      "withdraw": "Withdraw",
+      "edit": "Edit",
+      "resubmit": "Resubmit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "updated": "Updated and resubmitted for review.",
+      "notFound": "Submission not found, or you don't have access.",
+      "confirmWithdraw": "Withdraw this submission?"
+    },
+    "favorites": {
+      "title": "Favorites",
+      "subtitle": "Tap the heart on a card to remove it",
+      "empty": "You haven't saved any resources yet."
+    },
+    "account": {
+      "title": "Account settings",
+      "subtitle": "Manage your account",
+      "profile": "Profile",
+      "name": "Name",
+      "save": "Save",
+      "saved": "Profile saved.",
+      "password": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "changePassword": "Update password",
+      "wrongPassword": "Current password is incorrect",
+      "passwordTooShort": "New password must be at least 6 characters",
+      "passwordSaved": "Password updated."
+    },
+    "resources": {
+      "title": "Resources",
+      "subtitle": "Create, edit and delete any resource",
+      "create": "New resource",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "featured": "Featured",
+      "created": "Resource created.",
+      "updated": "Resource updated.",
+      "confirmDelete": "Delete this resource?"
+    },
+    "review": {
+      "title": "Review",
+      "subtitle": "Review resources submitted by users"
+    },
+    "users": {
+      "title": "Users",
+      "subtitle": "View users and manage roles",
+      "email": "Email",
+      "role": "Role",
+      "makeAdmin": "Make admin",
+      "makeUser": "Make user",
+      "delete": "Delete",
+      "confirmDelete": "Delete this user?",
+      "roleUser": "User",
+      "roleAdmin": "Admin"
+    },
+    "taxonomy": {
+      "title": "Categories & Options",
+      "subtitle": "Manage resource types, categories, pricing and status values with multilingual labels",
+      "kinds": {
+        "type": "Type",
+        "category": "Category",
+        "pricing": "Pricing",
+        "status": "Status"
+      },
+      "add": "Add option",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "value": "Value",
+      "valueHint": "Unique identifier (e.g. tool, chat, free); cannot be changed after creation",
+      "sortOrder": "Sort order",
+      "active": "Active",
+      "labels": "Multilingual labels",
+      "confirmDelete": "Delete this option?",
+      "invalid": "Invalid or malformed option value",
+      "duplicate": "A value with this name already exists in this category",
+      "created": "Option created.",
+      "saved": "Option saved.",
+      "deleted": "Option deleted.",
+      "protected": "This status is required by the review workflow and cannot be deleted.",
+      "inUse": "This option is still referenced by resources and cannot be deleted."
+    }
+  },
+  "about": {
+    "title": "About AI Valley",
+    "content": "AI Valley is a hand-curated AI resource hub, bringing together tools, models, agents and learning materials to help you discover and adopt AI faster."
+  },
+  "footer": {
+    "tagline": "A hand-curated AI resource hub",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "notFound": "Page not found",
+    "backHome": "Back to home"
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "AI Valley · KI-Ressourcen-Zentrum",
+    "description": "Entdecke und speichere kuratierte KI-Tools, Modelle, Agenten und Lernressourcen."
+  },
+  "nav": {
+    "home": "Start",
+    "explore": "Entdecken",
+    "blog": "Blog",
+    "about": "Über uns"
+  },
+  "header": {
+    "dashboard": "Dashboard",
+    "favorites": "Favoriten",
+    "submit": "Ressource einreichen",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "admin": "Admin"
+  },
+  "theme": {
+    "toLight": "Zum hellen Modus wechseln",
+    "toDark": "Zum dunklen Modus wechseln"
+  },
+  "hero": {
+    "badge": "Kuratiert · Zweisprachig · Aktualisiert",
+    "title": "Entdecke die besten",
+    "titleHighlight": "KI-Ressourcen",
+    "subtitle": "Eine Auswahl an KI-Tools, Modellen, Agenten und Lernressourcen, um schnell das Richtige zu finden.",
+    "searchPlaceholder": "Tools, Modelle, Agenten oder Ressourcen suchen…",
+    "browseAll": "Alle Ressourcen ansehen",
+    "submit": "Ressource einreichen"
+  },
+  "home": {
+    "featuredTitle": "Empfehlungen",
+    "featuredSubtitle": "Hochwertige KI-Ressourcen, von der Redaktion ausgewählt",
+    "viewAll": "Alle anzeigen",
+    "browseByType": "Nach Typ durchsuchen",
+    "stats": {
+      "resources": "Ressourcen gesamt",
+      "tools": "KI-Tools",
+      "models": "KI-Modelle",
+      "agents": "Agenten",
+      "learning": "Lernen"
+    }
+  },
+  "explore": {
+    "title": "Ressourcen entdecken",
+    "subtitle": "Suche und filtere, um die passenden KI-Ressourcen zu finden",
+    "searchPlaceholder": "Nach Name, Beschreibung oder Tag suchen…",
+    "type": "Typ",
+    "category": "Kategorie",
+    "pricing": "Preis",
+    "sort": "Sortieren",
+    "all": "Alle",
+    "sortFeatured": "Empfehlungen zuerst",
+    "sortName": "Nach Name",
+    "tabTrending": "Beliebt",
+    "tabFeatured": "Empfohlen",
+    "tabRecent": "Neu",
+    "results": "{count} Ressourcen",
+    "empty": "Keine passenden Ressourcen gefunden. Versuche ein anderes Stichwort oder einen anderen Filter."
+  },
+  "detail": {
+    "visit": "Website besuchen",
+    "type": "Typ",
+    "category": "Kategorie",
+    "pricing": "Preis",
+    "tags": "Tags",
+    "related": "Ähnliche Ressourcen",
+    "back": "Zurück"
+  },
+  "favorite": {
+    "add": "Speichern",
+    "added": "Gespeichert",
+    "loginPrompt": "Zum Speichern anmelden"
+  },
+  "favorites": {
+    "title": "Favoriten",
+    "subtitle": "Alle gespeicherten Ressourcen",
+    "empty": "Du hast noch nichts gespeichert. Schau dich unter „Entdecken“ um.",
+    "browse": "Entdecken"
+  },
+  "submit": {
+    "title": "Ressource einreichen",
+    "subtitle": "Empfiehl eine KI-Ressource, die aufgenommen werden sollte. Nach Prüfung wird sie veröffentlicht.",
+    "nameEn": "Name (Englisch)",
+    "nameZh": "Name (Chinesisch)",
+    "descEn": "Beschreibung (Englisch)",
+    "descZh": "Beschreibung (Chinesisch)",
+    "url": "Website-Link",
+    "type": "Typ",
+    "category": "Kategorie",
+    "pricing": "Preis",
+    "tags": "Tags (durch Kommas getrennt)",
+    "submit": "Einreichen",
+    "submitting": "Wird gesendet…",
+    "success": "Gesendet! Wird nach Prüfung veröffentlicht.",
+    "error": "Senden fehlgeschlagen. Bitte später erneut versuchen.",
+    "loginRequired": "Zum Einreichen anmelden",
+    "loginCta": "Anmelden",
+    "spec": "Parameter",
+    "platform": "Plattform",
+    "apiAccess": "API-Zugriff",
+    "provider": "Anbieter",
+    "openSource": "Open Source",
+    "contextWindow": "Kontextfenster",
+    "modalities": "Modalitäten",
+    "agentKind": "Art",
+    "author": "Autor",
+    "version": "Version",
+    "trigger": "Auslöser",
+    "level": "Niveau",
+    "format": "Format"
+  },
+  "blog": {
+    "title": "Blog · News",
+    "subtitle": "Ausgewählte Artikel und Einblicke zu KI",
+    "readMore": "Weiterlesen",
+    "backToList": "Zurück zum Blog"
+  },
+  "login": {
+    "title": "Anmelden",
+    "registerTitle": "Registrieren",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "name": "Name (optional)",
+    "submit": "Anmelden",
+    "register": "Registrieren",
+    "switchToRegister": "Noch kein Konto? Registrieren",
+    "switchToLogin": "Schon ein Konto? Anmelden",
+    "error": "E-Mail oder Passwort ist falsch",
+    "registerError": "Registrierung fehlgeschlagen – diese E-Mail wird möglicherweise bereits verwendet",
+    "loggedIn": "Angemeldet"
+  },
+  "admin": {
+    "title": "Verwaltung",
+    "subtitle": "Eingereichte Ressourcen prüfen",
+    "pendingTitle": "Ausstehende Ressourcen",
+    "noPending": "Keine ausstehenden Ressourcen.",
+    "approve": "Freigeben",
+    "reject": "Ablehnen",
+    "submittedBy": "Eingereicht von",
+    "notAdmin": "Du hast keinen Zugriff auf diese Seite"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "backToSite": "Zur Website",
+    "nav": {
+      "overview": "Übersicht",
+      "submissions": "Meine Einreichungen",
+      "favorites": "Favoriten",
+      "account": "Kontoeinstellungen",
+      "resources": "Ressourcen",
+      "review": "Prüfung",
+      "users": "Benutzer",
+      "taxonomy": "Kategorien und Optionen"
+    },
+    "overview": {
+      "title": "Übersicht",
+      "subtitle": "Deine Aktivitäten auf einen Blick",
+      "submissions": "Meine Einreichungen",
+      "pending": "Ausstehend",
+      "published": "Veröffentlicht",
+      "rejected": "Abgelehnt",
+      "favorites": "Favoriten"
+    },
+    "status": {
+      "PENDING": "Ausstehend",
+      "PUBLISHED": "Veröffentlicht",
+      "REJECTED": "Abgelehnt"
+    },
+    "submissions": {
+      "title": "Meine Einreichungen",
+      "subtitle": "Sieh dir deine eingereichten Ressourcen und ihren Status an",
+      "empty": "Du hast noch keine Ressourcen eingereicht.",
+      "withdraw": "Zurückziehen",
+      "edit": "Bearbeiten",
+      "resubmit": "Erneut einreichen",
+      "delete": "Löschen",
+      "cancel": "Abbrechen",
+      "updated": "Aktualisiert und erneut zur Prüfung eingereicht.",
+      "notFound": "Einreichung nicht gefunden oder keine Berechtigung.",
+      "confirmWithdraw": "Diese Einreichung zurückziehen?"
+    },
+    "favorites": {
+      "title": "Favoriten",
+      "subtitle": "Klicke auf das Herz auf einer Karte, um aus den Favoriten zu entfernen",
+      "empty": "Du hast noch nichts gespeichert."
+    },
+    "account": {
+      "title": "Kontoeinstellungen",
+      "subtitle": "Verwalte deine Kontoinformationen",
+      "profile": "Profil",
+      "name": "Name",
+      "save": "Speichern",
+      "saved": "Profil gespeichert.",
+      "password": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "changePassword": "Passwort aktualisieren",
+      "wrongPassword": "Das aktuelle Passwort ist falsch",
+      "passwordTooShort": "Das neue Passwort muss mindestens 6 Zeichen haben",
+      "passwordSaved": "Passwort aktualisiert."
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "subtitle": "Ressourcen hinzufügen, bearbeiten und löschen",
+      "create": "Ressource hinzufügen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "cancel": "Abbrechen",
+      "featured": "Als Empfehlung markieren",
+      "created": "Ressource erstellt.",
+      "updated": "Ressource aktualisiert.",
+      "confirmDelete": "Diese Ressource löschen?"
+    },
+    "review": {
+      "title": "Prüfung",
+      "subtitle": "Von Benutzern eingereichte Ressourcen prüfen"
+    },
+    "users": {
+      "title": "Benutzer",
+      "subtitle": "Benutzer ansehen und Rollen verwalten",
+      "email": "E-Mail",
+      "role": "Rolle",
+      "makeAdmin": "Zum Administrator machen",
+      "makeUser": "Zum normalen Benutzer machen",
+      "delete": "Löschen",
+      "confirmDelete": "Diesen Benutzer löschen?",
+      "roleUser": "Benutzer",
+      "roleAdmin": "Administrator"
+    },
+    "taxonomy": {
+      "title": "Kategorien und Optionen",
+      "subtitle": "Ressourcentypen, Kategorien, Preise und Status mit mehrsprachigen Labels verwalten",
+      "kinds": {
+        "type": "Typ",
+        "category": "Kategorie",
+        "pricing": "Preis",
+        "status": "Status"
+      },
+      "add": "Option hinzufügen",
+      "edit": "Bearbeiten",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "value": "Wert",
+      "valueHint": "Eindeutige Kennung (z. B. tool, chat, free); nach Erstellung nicht änderbar",
+      "sortOrder": "Sortierung",
+      "active": "Aktiv",
+      "labels": "Mehrsprachige Labels",
+      "confirmDelete": "Diese Option löschen?",
+      "invalid": "Ungültiger oder falsch formatierter Wert",
+      "duplicate": "In dieser Kategorie existiert bereits derselbe Wert",
+      "created": "Option erstellt.",
+      "saved": "Option gespeichert.",
+      "deleted": "Option gelöscht.",
+      "protected": "Dieser Status ist für den Prüfablauf erforderlich und kann nicht gelöscht werden.",
+      "inUse": "Diese Option wird noch von Ressourcen referenziert und kann nicht gelöscht werden."
+    }
+  },
+  "about": {
+    "title": "Über AI Valley",
+    "content": "AI Valley ist ein sorgfältig kuratiertes KI-Ressourcen-Zentrum, das Tools, Modelle, Agenten und Lernmaterialien bündelt, um dir zu helfen, KI schneller zu entdecken und zu nutzen."
+  },
+  "footer": {
+    "tagline": "Ein sorgfältig kuratiertes KI-Ressourcen-Zentrum",
+    "rights": "Alle Rechte vorbehalten"
+  },
+  "common": {
+    "notFound": "Seite nicht gefunden",
+    "backHome": "Zur Startseite"
+  }
+}

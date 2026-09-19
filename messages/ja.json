@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "AI Valley · AI リソースセンター",
+    "description": "厳選された AI ツール・モデル・エージェント・学習リソースを見つけて保存。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "explore": "探索",
+    "blog": "ブログ",
+    "about": "概要"
+  },
+  "header": {
+    "dashboard": "ダッシュボード",
+    "favorites": "お気に入り",
+    "submit": "リソースを投稿",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "admin": "管理"
+  },
+  "theme": {
+    "toLight": "ライトモードに切り替え",
+    "toDark": "ダークモードに切り替え"
+  },
+  "hero": {
+    "badge": "厳選 · バイリンガル · 随時更新",
+    "title": "最高の",
+    "titleHighlight": "AI リソース",
+    "subtitle": "厳選された AI ツール、モデル、エージェント、学習リソースを集約し、最適なものを素早く見つけやすくします。",
+    "searchPlaceholder": "ツール、モデル、エージェント、学習リソースを検索…",
+    "browseAll": "すべてのリソースを見る",
+    "submit": "リソースを投稿"
+  },
+  "home": {
+    "featuredTitle": "おすすめ",
+    "featuredSubtitle": "編集部が厳選した高品質な AI リソース",
+    "viewAll": "すべて見る",
+    "browseByType": "タイプ別に探す",
+    "stats": {
+      "resources": "リソース総数",
+      "tools": "AI ツール",
+      "models": "AI モデル",
+      "agents": "エージェント",
+      "learning": "学習リソース"
+    }
+  },
+  "explore": {
+    "title": "リソースを探索",
+    "subtitle": "検索・絞り込みで必要な AI リソースを見つける",
+    "searchPlaceholder": "名前・説明・タグで検索…",
+    "type": "タイプ",
+    "category": "カテゴリ",
+    "pricing": "料金",
+    "sort": "並び替え",
+    "all": "すべて",
+    "sortFeatured": "おすすめ順",
+    "sortName": "名前順",
+    "tabTrending": "トレンド",
+    "tabFeatured": "おすすめ",
+    "tabRecent": "新着",
+    "results": "{count} 件のリソース",
+    "empty": "一致するリソースが見つかりません。キーワードや条件を変えてみてください。"
+  },
+  "detail": {
+    "visit": "サイトを見る",
+    "type": "タイプ",
+    "category": "カテゴリ",
+    "pricing": "料金",
+    "tags": "タグ",
+    "related": "関連リソース",
+    "back": "戻る"
+  },
+  "favorite": {
+    "add": "保存",
+    "added": "保存済み",
+    "loginPrompt": "ログインすると保存できます"
+  },
+  "favorites": {
+    "title": "お気に入り",
+    "subtitle": "保存したすべてのリソース",
+    "empty": "まだリソースを保存していません。探索ページを見てみましょう。",
+    "browse": "探索へ"
+  },
+  "submit": {
+    "title": "リソースを投稿",
+    "subtitle": "収録に値する AI リソースを推薦。審査通過後に公開されます。",
+    "nameEn": "名称（英語）",
+    "nameZh": "名称（中国語）",
+    "descEn": "説明（英語）",
+    "descZh": "説明（中国語）",
+    "url": "公式サイト URL",
+    "type": "タイプ",
+    "category": "カテゴリ",
+    "pricing": "料金",
+    "tags": "タグ（カンマ区切り）",
+    "submit": "投稿",
+    "submitting": "投稿中…",
+    "success": "投稿しました！審査通過後に公開されます。",
+    "error": "投稿に失敗しました。後でもう一度お試しください。",
+    "loginRequired": "投稿にはログインが必要です",
+    "loginCta": "ログインへ",
+    "spec": "パラメータ",
+    "platform": "プラットフォーム",
+    "apiAccess": "API アクセス",
+    "provider": "提供元",
+    "openSource": "オープンソース",
+    "contextWindow": "コンテキストウィンドウ",
+    "modalities": "モダリティ",
+    "agentKind": "形態",
+    "author": "作者",
+    "version": "バージョン",
+    "trigger": "トリガー",
+    "level": "難易度",
+    "format": "形式"
+  },
+  "blog": {
+    "title": "ブログ · ニュース",
+    "subtitle": "AI に関する厳選記事と考察",
+    "readMore": "続きを読む",
+    "backToList": "ブログに戻る"
+  },
+  "login": {
+    "title": "ログイン",
+    "registerTitle": "登録",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "name": "ニックネーム（任意）",
+    "submit": "ログイン",
+    "register": "登録",
+    "switchToRegister": "アカウントをお持ちでない方は登録",
+    "switchToLogin": "すでにアカウントをお持ちの方はログイン",
+    "error": "メールアドレスまたはパスワードが正しくありません",
+    "registerError": "登録に失敗しました。このメールアドレスは既に使用されている可能性があります",
+    "loggedIn": "ログイン済み"
+  },
+  "admin": {
+    "title": "管理",
+    "subtitle": "公開待ちの投稿リソースを審査",
+    "pendingTitle": "審査待ちリソース",
+    "noPending": "審査待ちのリソースはありません。",
+    "approve": "承認",
+    "reject": "却下",
+    "submittedBy": "投稿者",
+    "notAdmin": "このページへのアクセス権限がありません"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "backToSite": "サイトに戻る",
+    "nav": {
+      "overview": "概要",
+      "submissions": "自分の投稿",
+      "favorites": "お気に入り管理",
+      "account": "アカウント設定",
+      "resources": "リソース管理",
+      "review": "審査",
+      "users": "ユーザー管理",
+      "taxonomy": "分類とオプション"
+    },
+    "overview": {
+      "title": "概要",
+      "subtitle": "アクティビティの概要",
+      "submissions": "自分の投稿",
+      "pending": "審査待ち",
+      "published": "公開済み",
+      "rejected": "却下",
+      "favorites": "お気に入り数"
+    },
+    "status": {
+      "PENDING": "審査待ち",
+      "PUBLISHED": "公開済み",
+      "REJECTED": "却下"
+    },
+    "submissions": {
+      "title": "自分の投稿",
+      "subtitle": "投稿したリソースと審査状況を確認",
+      "empty": "まだリソースを投稿していません。",
+      "withdraw": "取り下げ",
+      "edit": "編集",
+      "resubmit": "再投稿",
+      "delete": "削除",
+      "cancel": "キャンセル",
+      "updated": "更新して再審査に提出しました。",
+      "notFound": "投稿が見つからないか、操作権限がありません。",
+      "confirmWithdraw": "この投稿を取り下げますか？"
+    },
+    "favorites": {
+      "title": "お気に入り管理",
+      "subtitle": "カードのハートボタンでお気に入りを解除できます",
+      "empty": "まだリソースを保存していません。"
+    },
+    "account": {
+      "title": "アカウント設定",
+      "subtitle": "アカウント情報を管理",
+      "profile": "プロフィール",
+      "name": "ニックネーム",
+      "save": "保存",
+      "saved": "プロフィールを保存しました。",
+      "password": "パスワード変更",
+      "currentPassword": "現在のパスワード",
+      "newPassword": "新しいパスワード",
+      "changePassword": "パスワードを更新",
+      "wrongPassword": "現在のパスワードが正しくありません",
+      "passwordTooShort": "新しいパスワードは 6 文字以上",
+      "passwordSaved": "パスワードを更新しました。"
+    },
+    "resources": {
+      "title": "リソース管理",
+      "subtitle": "すべてのリソースを追加・編集・削除",
+      "create": "リソースを追加",
+      "edit": "編集",
+      "delete": "削除",
+      "cancel": "キャンセル",
+      "featured": "おすすめに設定",
+      "created": "リソースを作成しました。",
+      "updated": "リソースを更新しました。",
+      "confirmDelete": "このリソースを削除しますか？"
+    },
+    "review": {
+      "title": "審査",
+      "subtitle": "ユーザーが投稿したリソースを審査"
+    },
+    "users": {
+      "title": "ユーザー管理",
+      "subtitle": "ユーザーの確認とロール管理",
+      "email": "メールアドレス",
+      "role": "ロール",
+      "makeAdmin": "管理者にする",
+      "makeUser": "一般ユーザーにする",
+      "delete": "削除",
+      "confirmDelete": "このユーザーを削除しますか？",
+      "roleUser": "一般ユーザー",
+      "roleAdmin": "管理者"
+    },
+    "taxonomy": {
+      "title": "分類とオプション",
+      "subtitle": "リソースのタイプ・カテゴリ・価格・ステータスの値と多言語ラベルを管理",
+      "kinds": {
+        "type": "タイプ",
+        "category": "カテゴリ",
+        "pricing": "価格",
+        "status": "ステータス"
+      },
+      "add": "オプションを追加",
+      "edit": "編集",
+      "save": "保存",
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "value": "値",
+      "valueHint": "一意の識別子（tool、chat、free など）。作成後は変更できません",
+      "sortOrder": "並び順",
+      "active": "有効",
+      "labels": "多言語ラベル",
+      "confirmDelete": "このオプションを削除しますか？",
+      "invalid": "オプションの値が無効か形式が正しくありません",
+      "duplicate": "このカテゴリには既に同じ値が存在します",
+      "created": "オプションを作成しました。",
+      "saved": "オプションを保存しました。",
+      "deleted": "オプションを削除しました。",
+      "protected": "このステータスは審査フローに必須のため削除できません。",
+      "inUse": "このオプションはリソースから参照されているため削除できません。"
+    }
+  },
+  "about": {
+    "title": "AI Valley について",
+    "content": "AI Valley は、ツール・モデル・エージェント・学習リソースを集約した厳選 AI リソースセンターで、AI をより速く見つけて使い始めるのを助けます。"
+  },
+  "footer": {
+    "tagline": "厳選された AI リソースセンター",
+    "rights": "無断転載を禁じます"
+  },
+  "common": {
+    "notFound": "ページが見つかりません",
+    "backHome": "ホームに戻る"
+  }
+}

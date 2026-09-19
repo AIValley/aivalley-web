@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "AI Valley · Centre de ressources IA",
+    "description": "Découvrez et enregistrez des outils, modèles, agents et ressources d'apprentissage IA sélectionnés."
+  },
+  "nav": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "blog": "Blog",
+    "about": "À propos"
+  },
+  "header": {
+    "dashboard": "Tableau de bord",
+    "favorites": "Favoris",
+    "submit": "Soumettre",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "admin": "Admin"
+  },
+  "theme": {
+    "toLight": "Passer en mode clair",
+    "toDark": "Passer en mode sombre"
+  },
+  "hero": {
+    "badge": "Sélectionné · Bilingue · Mis à jour",
+    "title": "Découvrez les meilleures",
+    "titleHighlight": "ressources IA",
+    "subtitle": "Une sélection d'outils, modèles, agents et ressources d'apprentissage IA pour trouver rapidement le bon.",
+    "searchPlaceholder": "Rechercher des outils, modèles, agents ou ressources…",
+    "browseAll": "Voir toutes les ressources",
+    "submit": "Soumettre"
+  },
+  "home": {
+    "featuredTitle": "Recommandés",
+    "featuredSubtitle": "Ressources IA de qualité sélectionnées par l'éditeur",
+    "viewAll": "Tout voir",
+    "browseByType": "Explorer par type",
+    "stats": {
+      "resources": "Ressources totales",
+      "tools": "Outils IA",
+      "models": "Modèles IA",
+      "agents": "Agents",
+      "learning": "Apprentissage"
+    }
+  },
+  "explore": {
+    "title": "Explorer les ressources",
+    "subtitle": "Recherchez et filtrez pour trouver les ressources IA qu'il vous faut",
+    "searchPlaceholder": "Rechercher par nom, description ou tag…",
+    "type": "Type",
+    "category": "Catégorie",
+    "pricing": "Prix",
+    "sort": "Trier",
+    "all": "Tous",
+    "sortFeatured": "Recommandés d'abord",
+    "sortName": "Par nom",
+    "tabTrending": "Tendances",
+    "tabFeatured": "À la une",
+    "tabRecent": "Récents",
+    "results": "{count} ressources",
+    "empty": "Aucune ressource trouvée. Essayez un autre mot-clé ou filtre."
+  },
+  "detail": {
+    "visit": "Visiter le site",
+    "type": "Type",
+    "category": "Catégorie",
+    "pricing": "Prix",
+    "tags": "Tags",
+    "related": "Ressources similaires",
+    "back": "Retour"
+  },
+  "favorite": {
+    "add": "Enregistrer",
+    "added": "Enregistré",
+    "loginPrompt": "Connectez-vous pour enregistrer"
+  },
+  "favorites": {
+    "title": "Favoris",
+    "subtitle": "Toutes vos ressources enregistrées",
+    "empty": "Vous n'avez encore rien enregistré. Jetez un œil à Explorer.",
+    "browse": "Explorer"
+  },
+  "submit": {
+    "title": "Soumettre une ressource",
+    "subtitle": "Proposez une ressource IA qui mérite d'être référencée. Elle sera publiée après validation.",
+    "nameEn": "Nom (anglais)",
+    "nameZh": "Nom (chinois)",
+    "descEn": "Description (anglais)",
+    "descZh": "Description (chinois)",
+    "url": "Lien du site",
+    "type": "Type",
+    "category": "Catégorie",
+    "pricing": "Prix",
+    "tags": "Tags (séparés par des virgules)",
+    "submit": "Soumettre",
+    "submitting": "Envoi…",
+    "success": "Envoyé ! Il sera publié après validation.",
+    "error": "Échec de l'envoi. Réessayez plus tard.",
+    "loginRequired": "Connectez-vous pour soumettre",
+    "loginCta": "Se connecter",
+    "spec": "Paramètres",
+    "platform": "Plateforme",
+    "apiAccess": "Accès API",
+    "provider": "Fournisseur",
+    "openSource": "Open source",
+    "contextWindow": "Fenêtre de contexte",
+    "modalities": "Modalités",
+    "agentKind": "Type",
+    "author": "Auteur",
+    "version": "Version",
+    "trigger": "Déclencheur",
+    "level": "Niveau",
+    "format": "Format"
+  },
+  "blog": {
+    "title": "Blog · Actualités",
+    "subtitle": "Articles et analyses sélectionnés sur l'IA",
+    "readMore": "Lire la suite",
+    "backToList": "Retour au blog"
+  },
+  "login": {
+    "title": "Connexion",
+    "registerTitle": "Inscription",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "name": "Nom (facultatif)",
+    "submit": "Connexion",
+    "register": "S'inscrire",
+    "switchToRegister": "Pas de compte ? Inscrivez-vous",
+    "switchToLogin": "Déjà un compte ? Connectez-vous",
+    "error": "E-mail ou mot de passe incorrect",
+    "registerError": "Échec de l'inscription : cet e-mail est peut-être déjà utilisé",
+    "loggedIn": "Connecté"
+  },
+  "admin": {
+    "title": "Administration",
+    "subtitle": "Validez les ressources soumises en attente",
+    "pendingTitle": "Ressources en attente",
+    "noPending": "Aucune ressource en attente.",
+    "approve": "Approuver",
+    "reject": "Rejeter",
+    "submittedBy": "Soumis par",
+    "notAdmin": "Vous n'avez pas accès à cette page"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "backToSite": "Retour au site",
+    "nav": {
+      "overview": "Aperçu",
+      "submissions": "Mes soumissions",
+      "favorites": "Favoris",
+      "account": "Paramètres du compte",
+      "resources": "Ressources",
+      "review": "Validation",
+      "users": "Utilisateurs",
+      "taxonomy": "Catégories et options"
+    },
+    "overview": {
+      "title": "Aperçu",
+      "subtitle": "Un aperçu de votre activité",
+      "submissions": "Mes soumissions",
+      "pending": "En attente",
+      "published": "Publiées",
+      "rejected": "Rejetées",
+      "favorites": "Favoris"
+    },
+    "status": {
+      "PENDING": "En attente",
+      "PUBLISHED": "Publié",
+      "REJECTED": "Rejeté"
+    },
+    "submissions": {
+      "title": "Mes soumissions",
+      "subtitle": "Consultez vos ressources soumises et leur statut",
+      "empty": "Vous n'avez encore rien soumis.",
+      "withdraw": "Retirer",
+      "edit": "Modifier",
+      "resubmit": "Resoumettre",
+      "delete": "Supprimer",
+      "cancel": "Annuler",
+      "updated": "Mise à jour et resoumise pour validation.",
+      "notFound": "Soumission introuvable ou accès refusé.",
+      "confirmWithdraw": "Retirer cette soumission ?"
+    },
+    "favorites": {
+      "title": "Favoris",
+      "subtitle": "Cliquez sur le cœur d'une carte pour retirer des favoris",
+      "empty": "Vous n'avez encore rien enregistré."
+    },
+    "account": {
+      "title": "Paramètres du compte",
+      "subtitle": "Gérez les informations de votre compte",
+      "profile": "Profil",
+      "name": "Nom",
+      "save": "Enregistrer",
+      "saved": "Profil enregistré.",
+      "password": "Changer le mot de passe",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "changePassword": "Mettre à jour le mot de passe",
+      "wrongPassword": "Mot de passe actuel incorrect",
+      "passwordTooShort": "Le nouveau mot de passe doit contenir au moins 6 caractères",
+      "passwordSaved": "Mot de passe mis à jour."
+    },
+    "resources": {
+      "title": "Ressources",
+      "subtitle": "Ajoutez, modifiez et supprimez des ressources",
+      "create": "Ajouter une ressource",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "cancel": "Annuler",
+      "featured": "Marquer comme vedette",
+      "created": "Ressource créée.",
+      "updated": "Ressource mise à jour.",
+      "confirmDelete": "Supprimer cette ressource ?"
+    },
+    "review": {
+      "title": "Validation",
+      "subtitle": "Validez les ressources soumises par les utilisateurs"
+    },
+    "users": {
+      "title": "Utilisateurs",
+      "subtitle": "Consultez les utilisateurs et gérez les rôles",
+      "email": "E-mail",
+      "role": "Rôle",
+      "makeAdmin": "Rendre administrateur",
+      "makeUser": "Rendre utilisateur normal",
+      "delete": "Supprimer",
+      "confirmDelete": "Supprimer cet utilisateur ?",
+      "roleUser": "Utilisateur",
+      "roleAdmin": "Administrateur"
+    },
+    "taxonomy": {
+      "title": "Catégories et options",
+      "subtitle": "Gérez les types, catégories, tarifs et statuts des ressources avec des libellés multilingues",
+      "kinds": {
+        "type": "Type",
+        "category": "Catégorie",
+        "pricing": "Tarif",
+        "status": "Statut"
+      },
+      "add": "Ajouter une option",
+      "edit": "Modifier",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "value": "Valeur",
+      "valueHint": "Identifiant unique (ex. tool, chat, free) ; non modifiable après création",
+      "sortOrder": "Ordre",
+      "active": "Actif",
+      "labels": "Libellés multilingues",
+      "confirmDelete": "Supprimer cette option ?",
+      "invalid": "Valeur non valide ou mal formatée",
+      "duplicate": "Une valeur identique existe déjà dans cette catégorie",
+      "created": "Option créée.",
+      "saved": "Option enregistrée.",
+      "deleted": "Option supprimée.",
+      "protected": "Ce statut est requis par le flux de validation et ne peut pas être supprimé.",
+      "inUse": "Cette option est encore référencée par des ressources et ne peut pas être supprimée."
+    }
+  },
+  "about": {
+    "title": "À propos d'AI Valley",
+    "content": "AI Valley est un centre de ressources IA soigneusement organisé qui réunit outils, modèles, agents et matériel d'apprentissage pour vous aider à découvrir et maîtriser l'IA plus vite."
+  },
+  "footer": {
+    "tagline": "Un centre de ressources IA soigneusement organisé",
+    "rights": "Tous droits réservés"
+  },
+  "common": {
+    "notFound": "Page introuvable",
+    "backHome": "Retour à l'accueil"
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "AI Valley · AI 리소스 센터",
+    "description": "엄선된 AI 도구, 모델, 에이전트, 학습 자료를 찾아 저장하세요."
+  },
+  "nav": {
+    "home": "홈",
+    "explore": "탐색",
+    "blog": "블로그",
+    "about": "소개"
+  },
+  "header": {
+    "dashboard": "대시보드",
+    "favorites": "즐겨찾기",
+    "submit": "리소스 제출",
+    "login": "로그인",
+    "logout": "로그아웃",
+    "admin": "관리자"
+  },
+  "theme": {
+    "toLight": "라이트 모드로 전환",
+    "toDark": "다크 모드로 전환"
+  },
+  "hero": {
+    "badge": "엄선 · 이중 언어 · 지속 업데이트",
+    "title": "최고의",
+    "titleHighlight": "AI 리소스",
+    "subtitle": "엄선된 AI 도구, 모델, 에이전트, 학습 자료를 한데 모아 필요한 것을 빠르게 찾도록 도와드립니다.",
+    "searchPlaceholder": "도구, 모델, 에이전트 또는 학습 자료 검색…",
+    "browseAll": "모든 리소스 보기",
+    "submit": "리소스 제출"
+  },
+  "home": {
+    "featuredTitle": "추천",
+    "featuredSubtitle": "편집팀이 엄선한 고품질 AI 리소스",
+    "viewAll": "전체 보기",
+    "browseByType": "유형별 탐색",
+    "stats": {
+      "resources": "전체 리소스",
+      "tools": "AI 도구",
+      "models": "AI 모델",
+      "agents": "에이전트",
+      "learning": "학습 자료"
+    }
+  },
+  "explore": {
+    "title": "리소스 탐색",
+    "subtitle": "검색하고 필터링하여 필요한 AI 리소스 찾기",
+    "searchPlaceholder": "이름, 설명 또는 태그 검색…",
+    "type": "유형",
+    "category": "카테고리",
+    "pricing": "가격",
+    "sort": "정렬",
+    "all": "전체",
+    "sortFeatured": "추천 우선",
+    "sortName": "이름순",
+    "tabTrending": "인기",
+    "tabFeatured": "추천",
+    "tabRecent": "최신",
+    "results": "리소스 {count}개",
+    "empty": "일치하는 리소스가 없습니다. 키워드나 필터를 바꿔보세요."
+  },
+  "detail": {
+    "visit": "사이트 방문",
+    "type": "유형",
+    "category": "카테고리",
+    "pricing": "가격",
+    "tags": "태그",
+    "related": "관련 리소스",
+    "back": "뒤로"
+  },
+  "favorite": {
+    "add": "저장",
+    "added": "저장됨",
+    "loginPrompt": "로그인 후 저장할 수 있습니다"
+  },
+  "favorites": {
+    "title": "즐겨찾기",
+    "subtitle": "저장한 모든 리소스",
+    "empty": "아직 저장한 리소스가 없습니다. 탐색 페이지를 둘러보세요.",
+    "browse": "탐색하기"
+  },
+  "submit": {
+    "title": "리소스 제출",
+    "subtitle": "등록할 가치가 있는 AI 리소스를 추천해 주세요. 검토 후 게시됩니다.",
+    "nameEn": "이름 (영어)",
+    "nameZh": "이름 (중국어)",
+    "descEn": "설명 (영어)",
+    "descZh": "설명 (중국어)",
+    "url": "공식 웹사이트 링크",
+    "type": "유형",
+    "category": "카테고리",
+    "pricing": "가격",
+    "tags": "태그 (쉼표로 구분)",
+    "submit": "제출",
+    "submitting": "제출 중…",
+    "success": "제출되었습니다! 검토 후 게시됩니다.",
+    "error": "제출에 실패했습니다. 잠시 후 다시 시도해 주세요.",
+    "loginRequired": "제출하려면 로그인해야 합니다",
+    "loginCta": "로그인하기",
+    "spec": "매개변수",
+    "platform": "플랫폼",
+    "apiAccess": "API 접근",
+    "provider": "제공자",
+    "openSource": "오픈소스",
+    "contextWindow": "컨텍스트 윈도우",
+    "modalities": "모달리티",
+    "agentKind": "형태",
+    "author": "작성자",
+    "version": "버전",
+    "trigger": "트리거",
+    "level": "난이도",
+    "format": "형식"
+  },
+  "blog": {
+    "title": "블로그 · 소식",
+    "subtitle": "AI에 관한 엄선된 글과 인사이트",
+    "readMore": "전체 읽기",
+    "backToList": "블로그로 돌아가기"
+  },
+  "login": {
+    "title": "로그인",
+    "registerTitle": "회원가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "name": "닉네임 (선택)",
+    "submit": "로그인",
+    "register": "가입",
+    "switchToRegister": "계정이 없으신가요? 가입하기",
+    "switchToLogin": "이미 계정이 있으신가요? 로그인",
+    "error": "이메일 또는 비밀번호가 올바르지 않습니다",
+    "registerError": "가입에 실패했습니다. 이메일이 이미 사용 중일 수 있습니다",
+    "loggedIn": "로그인됨"
+  },
+  "admin": {
+    "title": "관리자",
+    "subtitle": "게시 대기 중인 제출 리소스 검토",
+    "pendingTitle": "검토 대기 리소스",
+    "noPending": "검토 대기 중인 리소스가 없습니다.",
+    "approve": "승인",
+    "reject": "거부",
+    "submittedBy": "제출자",
+    "notAdmin": "이 페이지에 접근할 권한이 없습니다"
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "backToSite": "사이트로 돌아가기",
+    "nav": {
+      "overview": "개요",
+      "submissions": "내 제출",
+      "favorites": "즐겨찾기 관리",
+      "account": "계정 설정",
+      "resources": "리소스 관리",
+      "review": "검토",
+      "users": "사용자 관리",
+      "taxonomy": "분류 및 옵션"
+    },
+    "overview": {
+      "title": "개요",
+      "subtitle": "내 활동 한눈에 보기",
+      "submissions": "내 제출",
+      "pending": "검토 대기",
+      "published": "게시됨",
+      "rejected": "거부됨",
+      "favorites": "즐겨찾기 수"
+    },
+    "status": {
+      "PENDING": "검토 대기",
+      "PUBLISHED": "게시됨",
+      "REJECTED": "거부됨"
+    },
+    "submissions": {
+      "title": "내 제출",
+      "subtitle": "제출한 리소스와 검토 상태 확인",
+      "empty": "아직 리소스를 제출하지 않았습니다.",
+      "withdraw": "철회",
+      "edit": "수정",
+      "resubmit": "다시 제출",
+      "delete": "삭제",
+      "cancel": "취소",
+      "updated": "수정되어 다시 검토에 제출되었습니다.",
+      "notFound": "제출을 찾을 수 없거나 권한이 없습니다.",
+      "confirmWithdraw": "이 제출을 철회하시겠습니까?"
+    },
+    "favorites": {
+      "title": "즐겨찾기 관리",
+      "subtitle": "카드의 하트 버튼을 누르면 즐겨찾기를 해제할 수 있습니다",
+      "empty": "아직 저장한 리소스가 없습니다."
+    },
+    "account": {
+      "title": "계정 설정",
+      "subtitle": "계정 정보 관리",
+      "profile": "프로필",
+      "name": "닉네임",
+      "save": "저장",
+      "saved": "프로필이 저장되었습니다.",
+      "password": "비밀번호 변경",
+      "currentPassword": "현재 비밀번호",
+      "newPassword": "새 비밀번호",
+      "changePassword": "비밀번호 업데이트",
+      "wrongPassword": "현재 비밀번호가 올바르지 않습니다",
+      "passwordTooShort": "새 비밀번호는 6자 이상이어야 합니다",
+      "passwordSaved": "비밀번호가 업데이트되었습니다."
+    },
+    "resources": {
+      "title": "리소스 관리",
+      "subtitle": "모든 리소스 추가·수정·삭제",
+      "create": "리소스 추가",
+      "edit": "수정",
+      "delete": "삭제",
+      "cancel": "취소",
+      "featured": "추천으로 설정",
+      "created": "리소스가 생성되었습니다.",
+      "updated": "리소스가 업데이트되었습니다.",
+      "confirmDelete": "이 리소스를 삭제하시겠습니까?"
+    },
+    "review": {
+      "title": "검토",
+      "subtitle": "사용자가 제출한 리소스 검토"
+    },
+    "users": {
+      "title": "사용자 관리",
+      "subtitle": "사용자 확인 및 역할 관리",
+      "email": "이메일",
+      "role": "역할",
+      "makeAdmin": "관리자로 설정",
+      "makeUser": "일반 사용자로 설정",
+      "delete": "삭제",
+      "confirmDelete": "이 사용자를 삭제하시겠습니까?",
+      "roleUser": "일반 사용자",
+      "roleAdmin": "관리자"
+    },
+    "taxonomy": {
+      "title": "분류 및 옵션",
+      "subtitle": "리소스 유형, 카테고리, 가격, 상태 값과 다국어 라벨 관리",
+      "kinds": {
+        "type": "유형",
+        "category": "카테고리",
+        "pricing": "가격",
+        "status": "상태"
+      },
+      "add": "옵션 추가",
+      "edit": "편집",
+      "save": "저장",
+      "cancel": "취소",
+      "delete": "삭제",
+      "value": "값",
+      "valueHint": "고유 식별자(예: tool, chat, free), 생성 후 수정할 수 없음",
+      "sortOrder": "정렬 순서",
+      "active": "활성화",
+      "labels": "다국어 라벨",
+      "confirmDelete": "이 옵션을 삭제할까요?",
+      "invalid": "옵션 값이 유효하지 않거나 형식이 잘못되었습니다",
+      "duplicate": "이 카테고리에 이미 같은 값이 존재합니다",
+      "created": "옵션을 생성했습니다.",
+      "saved": "옵션을 저장했습니다.",
+      "deleted": "옵션을 삭제했습니다.",
+      "protected": "이 상태는 검토 워크플로에 필요하므로 삭제할 수 없습니다.",
+      "inUse": "이 옵션은 리소스에서 참조 중이므로 삭제할 수 없습니다."
+    }
+  },
+  "about": {
+    "title": "AI Valley 소개",
+    "content": "AI Valley는 도구, 모델, 에이전트, 학습 자료를 한데 모은 정성스러운 AI 리소스 센터로, 더 빠르게 AI를 발견하고 시작하도록 돕습니다."
+  },
+  "footer": {
+    "tagline": "정성스럽게 엄선한 AI 리소스 센터",
+    "rights": "모든 권리 보유"
+  },
+  "common": {
+    "notFound": "페이지를 찾을 수 없습니다",
+    "backHome": "홈으로 돌아가기"
+  }
+}
