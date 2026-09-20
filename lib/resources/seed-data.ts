@@ -1,4 +1,5 @@
 import type { Category, Pricing, ResourceType, I18nMap } from "./types";
+import type { ResourceSpec } from "./spec";
 
 export interface SeedResource {
   type: ResourceType;
@@ -16,6 +17,7 @@ export interface SeedResource {
     name?: I18nMap;
     desc: I18nMap;
   };
+  spec?: ResourceSpec;
 }
 
 export interface SeedPost {
@@ -1665,6 +1667,33 @@ export const seedResources: SeedResource[] = [
     pricing: "free",
     logo: "wand",
     featured: true,
+    spec: {
+      author: "Anthropic",
+      version: "1.0",
+      trigger: "/skill",
+      githubRepo: "anthropics/skills",
+      summaryEn:
+        "Pack reusable instructions, workflows and tools as skills that Claude Code agents load on demand.",
+      summaryZh:
+        "将可复用的指令、工作流与工具打包为技能，供 Claude Code 智能体按需加载。",
+      skillMd: `# Claude Skills
+
+Skills are folders of instructions and resources that teach Claude Code how to perform a task.
+
+## Structure
+
+- \`SKILL.md\` — the entry point, with frontmatter (name + description).
+- Supporting scripts, references and templates.
+
+## Usage
+
+Drop a skill folder into your project and reference it in conversation. Claude loads only the skills it needs for the task at hand.`,
+      files: ["SKILL.md", "LICENSE", "scripts/example.py"],
+      versions: ["1.0.0", "0.9.0"],
+      githubStars: 24500,
+      githubForks: 1300,
+      securityIndex: 92,
+    },
   },
   {
     type: "skill",
@@ -1677,6 +1706,31 @@ export const seedResources: SeedResource[] = [
     tags: ["skill", "gpt", "openai"],
     pricing: "freemium",
     logo: "bot",
+    spec: {
+      author: "OpenAI",
+      version: "1.0",
+      trigger: "GPT Store",
+      summaryEn:
+        "Build custom GPTs with instructions, knowledge files and actions, then share them via the GPT Store.",
+      summaryZh:
+        "用指令、知识文件与动作构建自定义 GPT，并通过 GPT Store 分享给他人。",
+      skillMd: `# GPTs
+
+GPTs are custom versions of ChatGPT. Combine instructions, uploaded knowledge and actions to shape behavior.
+
+## Configure
+
+1. Set the system instructions.
+2. Upload knowledge files.
+3. Add actions (API calls) if needed.
+
+## Publish
+
+Share via a link or list in the GPT Store.`,
+      files: ["instructions.md", "knowledge.pdf", "schema.json"],
+      versions: ["1.0.0"],
+      securityIndex: 88,
+    },
   },
   {
     type: "skill",
@@ -1689,6 +1743,25 @@ export const seedResources: SeedResource[] = [
     tags: ["skill", "gemini", "google"],
     pricing: "freemium",
     logo: "gem",
+    spec: {
+      author: "Google",
+      version: "1.0",
+      trigger: "Gem",
+      summaryEn:
+        "Create custom Gemini assistants by writing instructions and reusing them across chats.",
+      summaryZh:
+        "通过编写指令创建自定义 Gemini 助手，并在多轮对话中反复复用。",
+      skillMd: `# Gems
+
+Gems let you customize Gemini with a dedicated persona and reusable instructions.
+
+## Create
+
+Give the Gem a name, instructions, and optional files. Gemini keeps the context ready whenever you start a new chat with it.`,
+      files: ["instructions.txt"],
+      versions: ["1.0.0"],
+      securityIndex: 85,
+    },
   },
   {
     type: "skill",
@@ -1701,6 +1774,25 @@ export const seedResources: SeedResource[] = [
     tags: ["skill", "bot", "platform"],
     pricing: "freemium",
     logo: "bot",
+    spec: {
+      author: "Quora",
+      version: "1.0",
+      trigger: "Bot",
+      summaryEn:
+        "Build prompt-driven bots on Poe and publish them for others to use across models.",
+      summaryZh:
+        "在 Poe 上构建基于提示词的机器人，并发布给他人跨模型使用。",
+      skillMd: `# Poe Bots
+
+Bots are prompt-based assistants on Poe. Pick a base model, write a system prompt, and share it.
+
+## Create
+
+Choose a model, then describe the bot's behavior with a prompt. You can add knowledge and custom logic.`,
+      files: ["prompt.md", "knowledge.txt"],
+      versions: ["1.0.0", "0.8.0"],
+      securityIndex: 78,
+    },
   },
   {
     type: "skill",
@@ -1713,6 +1805,155 @@ export const seedResources: SeedResource[] = [
     tags: ["skill", "microsoft", "low-code"],
     pricing: "freemium",
     logo: "wand",
+    spec: {
+      author: "Microsoft",
+      version: "1.0",
+      trigger: "Copilot",
+      summaryEn:
+        "Design copilots with a visual canvas, connect them to data, and publish to Microsoft 365.",
+      summaryZh:
+        "用可视化画布设计 Copilot，连接数据源，并发布到 Microsoft 365。",
+      skillMd: `# Copilot Studio
+
+Copilot Studio is a low-code authoring tool for building copilots and agent skills.
+
+## Build
+
+Use the visual canvas to define topics, connect knowledge sources, and add generative answers.
+
+## Publish
+
+Deploy to Teams, websites, and Microsoft 365 Copilot.`,
+      files: ["topics.yaml", "knowledge/faq.md"],
+      versions: ["1.0.0"],
+      securityIndex: 90,
+    },
+  },
+  // ============ 提示词 Prompts ============
+  {
+    type: "prompt",
+    nameEn: "Expert Technical Writer",
+    nameZh: "技术写作专家",
+    descEn: "A reusable system prompt that turns any AI into a clear, well-structured technical writer.",
+    descZh: "一个可复用的系统提示词，让任何 AI 变成条理清晰的技术写作专家。",
+    url: "https://prompts.chat/",
+    category: "writing",
+    tags: ["prompt", "writing", "system-prompt"],
+    pricing: "free",
+    featured: true,
+    spec: {
+      content: `You are an expert technical writer. Write clear, concise and well-structured documentation.
+
+Guidelines:
+- Lead with a one-sentence summary.
+- Use short paragraphs and bullet lists.
+- Prefer active voice and precise terminology.
+- Include a concrete example where it helps.`,
+      model: "GPT-4o / Claude",
+      author: "Community",
+      variables: ["topic", "audience"],
+    },
+  },
+  {
+    type: "prompt",
+    nameEn: "Chain-of-Thought Reasoner",
+    nameZh: "思维链推理",
+    descEn: "A prompt that forces step-by-step reasoning before giving a final answer.",
+    descZh: "一个强制先逐步推理、再给出最终答案的提示词。",
+    url: "https://prompts.chat/",
+    category: "research",
+    tags: ["prompt", "reasoning", "cot"],
+    pricing: "free",
+    spec: {
+      content: `Solve the following problem step by step.
+
+1. Restate the problem in your own words.
+2. List the key facts and constraints.
+3. Work through the reasoning one step at a time.
+4. Verify your answer, then state it clearly.`,
+      model: "GPT-4o / Claude / Gemini",
+      author: "Community",
+      variables: ["problem"],
+    },
+  },
+  {
+    type: "prompt",
+    nameEn: "Customer Support Agent",
+    nameZh: "客服助手",
+    descEn: "A friendly customer-support persona with escalation rules, ready to drop into any chatbot.",
+    descZh: "一个友好、带升级规则的客服人设提示词，可直接用于任何聊天机器人。",
+    url: "https://prompts.chat/",
+    category: "chat",
+    tags: ["prompt", "support", "customer-service"],
+    pricing: "free",
+    spec: {
+      content: `You are a friendly customer-support agent for {{company}}.
+
+Rules:
+- Greet warmly and ask how you can help.
+- Answer only from the provided knowledge base.
+- If unsure, escalate to a human and apologize for the wait.
+- Never invent policies or prices.`,
+      model: "GPT-4o",
+      author: "Community",
+      variables: ["company"],
+    },
+  },
+  // ============ 数据集 DataSets ============
+  {
+    type: "dataset",
+    nameEn: "Alpaca Instruction Dataset",
+    nameZh: "Alpaca 指令数据集",
+    descEn: "52K instruction-following examples generated from text-davinci-003, widely used for instruction tuning.",
+    descZh: "由 text-davinci-003 生成的 52K 条指令遵循示例，广泛用于指令微调。",
+    url: "https://huggingface.co/datasets/tatsu-lab/alpaca",
+    category: "data",
+    tags: ["dataset", "instruction", "fine-tuning", "llm"],
+    pricing: "free",
+    featured: true,
+    spec: {
+      format: "json",
+      rows: 52002,
+      license: "CC BY-NC 4.0",
+      source: "Hugging Face / Stanford",
+      columns: ["instruction", "input", "output"],
+    },
+  },
+  {
+    type: "dataset",
+    nameEn: "IMDB Movie Reviews",
+    nameZh: "IMDB 影评数据集",
+    descEn: "50K labeled movie reviews for binary sentiment classification.",
+    descZh: "50K 条带标注的影评，用于二分类情感分析。",
+    url: "https://huggingface.co/datasets/stanfordnlp/imdb",
+    category: "data",
+    tags: ["dataset", "sentiment", "nlp", "text"],
+    pricing: "free",
+    spec: {
+      format: "parquet",
+      rows: 50000,
+      license: "MIT",
+      source: "Hugging Face / Stanford",
+      columns: ["text", "label"],
+    },
+  },
+  {
+    type: "dataset",
+    nameEn: "Common Crawl Sample",
+    nameZh: "Common Crawl 采样",
+    descEn: "A sampled slice of the Common Crawl web corpus for language-model pretraining research.",
+    descZh: "Common Crawl 网页语料的采样切片，用于语言模型预训练研究。",
+    url: "https://commoncrawl.org/",
+    category: "data",
+    tags: ["dataset", "web", "corpus", "pretraining"],
+    pricing: "free",
+    spec: {
+      format: "warc / parquet",
+      rows: 400000000,
+      license: "CC BY 4.0",
+      source: "Common Crawl",
+      columns: ["url", "html", "text", "timestamp"],
+    },
   },
 ];
 

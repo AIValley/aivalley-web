@@ -80,6 +80,34 @@
     "empty": "Aún no has guardado recursos. Echa un vistazo a Explorar.",
     "browse": "Explorar"
   },
+  "skill": {
+    "github": "Repositorio de GitHub",
+    "summary": "Resumen",
+    "summaryEn": "Resumen (inglés)",
+    "summaryZh": "Resumen (chino)",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "Archivos",
+      "versions": "Versiones"
+    },
+    "related": "Skills relacionados",
+    "stars": "Estrellas",
+    "forks": "Forks",
+    "securityIndex": "Índice de seguridad",
+    "refresh": "Actualizar",
+    "emptySkillMd": "Sin contenido de SKILL.md",
+    "emptyFiles": "No hay archivos listados",
+    "emptyVersions": "Sin historial de versiones"
+  },
+  "prompt": {
+    "content": "Prompt",
+    "variables": "Variables",
+    "related": "Prompts relacionados"
+  },
+  "dataset": {
+    "columns": "Columnas",
+    "related": "Datasets relacionados"
+  },
   "submit": {
     "title": "Enviar recurso",
     "subtitle": "Recomienda un recurso de IA que merezca incluirse. Se publicará tras su revisión.",
@@ -110,7 +138,14 @@
     "version": "Versión",
     "trigger": "Activador",
     "level": "Nivel",
-    "format": "Formato"
+    "format": "Formato",
+    "content": "Texto del prompt",
+    "model": "Modelo de destino",
+    "variables": "Variables",
+    "rows": "Registros",
+    "license": "Licencia",
+    "source": "Fuente",
+    "columns": "Columnas / campos"
   },
   "blog": {
     "title": "Blog · Noticias",
@@ -247,6 +282,7 @@
       "value": "Valor",
       "valueHint": "Identificador único (p. ej. tool, chat, free); no se puede cambiar tras crearlo",
       "sortOrder": "Orden",
+      "dragHint": "Arrastra el asa para reordenar",
       "active": "Activo",
       "labels": "Etiquetas multilingües",
       "confirmDelete": "¿Eliminar esta opción?",

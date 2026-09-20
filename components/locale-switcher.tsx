@@ -41,7 +41,10 @@ export function LocaleSwitcher() {
   function targetPath(locale: Locale) {
     const segments = pathname.split("/");
     segments[1] = locale;
-    return segments.join("/") || `/${locale}`;
+    const base = segments.join("/") || `/${locale}`;
+    // 保留当前查询参数（如 /dashboard/taxonomy?kind=category）
+    const search = typeof window !== "undefined" ? window.location.search : "";
+    return base + search;
   }
 
   return (

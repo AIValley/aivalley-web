@@ -26,6 +26,10 @@ export function typePath(type: string): string {
       return "/learning";
     case "skill":
       return "/skills";
+    case "prompt":
+      return "/prompts";
+    case "dataset":
+      return "/datasets";
     default:
       return "/explore";
   }

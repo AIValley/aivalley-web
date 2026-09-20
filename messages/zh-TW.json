@@ -80,6 +80,34 @@
     "empty": "還沒有收藏任何資源，去瀏覽頁看看吧。",
     "browse": "去瀏覽"
   },
+  "skill": {
+    "github": "GitHub 倉庫",
+    "summary": "簡介",
+    "summaryEn": "簡介（英文）",
+    "summaryZh": "簡介（中文）",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "檔案",
+      "versions": "版本"
+    },
+    "related": "相關 Skill",
+    "stars": "Stars",
+    "forks": "Forks",
+    "securityIndex": "安全指數",
+    "refresh": "重新整理",
+    "emptySkillMd": "暫無 SKILL.md 內容",
+    "emptyFiles": "暫無檔案列表",
+    "emptyVersions": "暫無版本記錄"
+  },
+  "prompt": {
+    "content": "提示詞",
+    "variables": "模板變數",
+    "related": "相關 Prompt"
+  },
+  "dataset": {
+    "columns": "欄位",
+    "related": "相關資料集"
+  },
   "submit": {
     "title": "提交資源",
     "subtitle": "推薦一個值得收錄的 AI 資源，審核通過後會上架。",
@@ -110,7 +138,14 @@
     "version": "版本",
     "trigger": "觸發方式",
     "level": "難度",
-    "format": "型態"
+    "format": "型態",
+    "content": "提示詞內容",
+    "model": "目標模型",
+    "variables": "模板變數",
+    "rows": "記錄數",
+    "license": "授權條款",
+    "source": "資料來源",
+    "columns": "欄位"
   },
   "blog": {
     "title": "部落格 · 資訊",
@@ -247,6 +282,7 @@
       "value": "值",
       "valueHint": "唯一標識（如 tool、chat、free），建立後不可修改",
       "sortOrder": "排序",
+      "dragHint": "拖動左側手柄可調整排序",
       "active": "啟用",
       "labels": "多語言標籤",
       "confirmDelete": "確定刪除此選項嗎？",

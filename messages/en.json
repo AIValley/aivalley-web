@@ -80,6 +80,34 @@
     "empty": "You haven't saved any resources yet. Browse the hub to get started.",
     "browse": "Browse"
   },
+  "skill": {
+    "github": "GitHub repository",
+    "summary": "Summary",
+    "summaryEn": "Summary (English)",
+    "summaryZh": "Summary (Chinese)",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "Files",
+      "versions": "Versions"
+    },
+    "related": "Related skills",
+    "stars": "Stars",
+    "forks": "Forks",
+    "securityIndex": "Security index",
+    "refresh": "Refresh",
+    "emptySkillMd": "No SKILL.md content",
+    "emptyFiles": "No files listed",
+    "emptyVersions": "No version history"
+  },
+  "prompt": {
+    "content": "Prompt",
+    "variables": "Variables",
+    "related": "Related prompts"
+  },
+  "dataset": {
+    "columns": "Columns",
+    "related": "Related datasets"
+  },
   "submit": {
     "title": "Submit a resource",
     "subtitle": "Recommend an AI resource worth listing. It will go live after review.",
@@ -110,7 +138,14 @@
     "version": "Version",
     "trigger": "Trigger",
     "level": "Level",
-    "format": "Format"
+    "format": "Format",
+    "content": "Prompt text",
+    "model": "Target model",
+    "variables": "Variables",
+    "rows": "Records",
+    "license": "License",
+    "source": "Source",
+    "columns": "Columns / fields"
   },
   "blog": {
     "title": "Blog",
@@ -247,6 +282,7 @@
       "value": "Value",
       "valueHint": "Unique identifier (e.g. tool, chat, free); cannot be changed after creation",
       "sortOrder": "Sort order",
+      "dragHint": "Drag the handle to reorder",
       "active": "Active",
       "labels": "Multilingual labels",
       "confirmDelete": "Delete this option?",

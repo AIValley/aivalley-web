@@ -80,6 +80,34 @@
     "empty": "Vous n'avez encore rien enregistré. Jetez un œil à Explorer.",
     "browse": "Explorer"
   },
+  "skill": {
+    "github": "Dépôt GitHub",
+    "summary": "Résumé",
+    "summaryEn": "Résumé (anglais)",
+    "summaryZh": "Résumé (chinois)",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "Fichiers",
+      "versions": "Versions"
+    },
+    "related": "Skills similaires",
+    "stars": "Étoiles",
+    "forks": "Forks",
+    "securityIndex": "Indice de sécurité",
+    "refresh": "Actualiser",
+    "emptySkillMd": "Aucun contenu SKILL.md",
+    "emptyFiles": "Aucun fichier listé",
+    "emptyVersions": "Aucun historique de versions"
+  },
+  "prompt": {
+    "content": "Prompt",
+    "variables": "Variables",
+    "related": "Prompts similaires"
+  },
+  "dataset": {
+    "columns": "Colonnes",
+    "related": "Datasets similaires"
+  },
   "submit": {
     "title": "Soumettre une ressource",
     "subtitle": "Proposez une ressource IA qui mérite d'être référencée. Elle sera publiée après validation.",
@@ -110,7 +138,14 @@
     "version": "Version",
     "trigger": "Déclencheur",
     "level": "Niveau",
-    "format": "Format"
+    "format": "Format",
+    "content": "Texte du prompt",
+    "model": "Modèle cible",
+    "variables": "Variables",
+    "rows": "Enregistrements",
+    "license": "Licence",
+    "source": "Source",
+    "columns": "Colonnes / champs"
   },
   "blog": {
     "title": "Blog · Actualités",
@@ -247,6 +282,7 @@
       "value": "Valeur",
       "valueHint": "Identifiant unique (ex. tool, chat, free) ; non modifiable après création",
       "sortOrder": "Ordre",
+      "dragHint": "Faites glisser la poignée pour réorganiser",
       "active": "Actif",
       "labels": "Libellés multilingues",
       "confirmDelete": "Supprimer cette option ?",

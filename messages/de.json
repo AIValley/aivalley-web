@@ -80,6 +80,34 @@
     "empty": "Du hast noch nichts gespeichert. Schau dich unter „Entdecken“ um.",
     "browse": "Entdecken"
   },
+  "skill": {
+    "github": "GitHub-Repository",
+    "summary": "Zusammenfassung",
+    "summaryEn": "Zusammenfassung (Englisch)",
+    "summaryZh": "Zusammenfassung (Chinesisch)",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "Dateien",
+      "versions": "Versionen"
+    },
+    "related": "Ähnliche Skills",
+    "stars": "Sterne",
+    "forks": "Forks",
+    "securityIndex": "Sicherheitsindex",
+    "refresh": "Aktualisieren",
+    "emptySkillMd": "Kein SKILL.md-Inhalt",
+    "emptyFiles": "Keine Dateien aufgelistet",
+    "emptyVersions": "Keine Versionshistorie"
+  },
+  "prompt": {
+    "content": "Prompt",
+    "variables": "Variablen",
+    "related": "Ähnliche Prompts"
+  },
+  "dataset": {
+    "columns": "Spalten",
+    "related": "Ähnliche Datensätze"
+  },
   "submit": {
     "title": "Ressource einreichen",
     "subtitle": "Empfiehl eine KI-Ressource, die aufgenommen werden sollte. Nach Prüfung wird sie veröffentlicht.",
@@ -110,7 +138,14 @@
     "version": "Version",
     "trigger": "Auslöser",
     "level": "Niveau",
-    "format": "Format"
+    "format": "Format",
+    "content": "Prompt-Text",
+    "model": "Zielmodell",
+    "variables": "Variablen",
+    "rows": "Datensätze",
+    "license": "Lizenz",
+    "source": "Quelle",
+    "columns": "Spalten / Felder"
   },
   "blog": {
     "title": "Blog · News",
@@ -247,6 +282,7 @@
       "value": "Wert",
       "valueHint": "Eindeutige Kennung (z. B. tool, chat, free); nach Erstellung nicht änderbar",
       "sortOrder": "Sortierung",
+      "dragHint": "Ziehen Sie den Griff, um die Reihenfolge zu ändern",
       "active": "Aktiv",
       "labels": "Mehrsprachige Labels",
       "confirmDelete": "Diese Option löschen?",

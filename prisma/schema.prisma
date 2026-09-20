@@ -54,6 +54,8 @@ model Resource {
   agent         Agent?
   skill         Skill?
   learning      Learning?
+  prompt        Prompt?
+  dataset       Dataset?
 
   @@index([status])
   @@index([type])
@@ -87,12 +89,21 @@ model Agent {
 }
 
 model Skill {
-  id         String   @id @default(uuid())
-  resourceId String   @unique
-  resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
-  author     String?
-  version    String?
-  trigger    String?
+  id            String   @id @default(uuid())
+  resourceId    String   @unique
+  resource      Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  author        String?
+  version       String?
+  trigger       String?
+  githubRepo    String? // "owner/repo"
+  summaryEn     String?
+  summaryZh     String?
+  skillMd       String? // SKILL.md 原文（Markdown）
+  files         String   @default("[]") // JSON 数组：文件路径
+  versions      String   @default("[]") // JSON 数组：版本历史
+  githubStars   Int?
+  githubForks   Int?
+  securityIndex Int? // 0–100
 }
 
 model Learning {
@@ -101,6 +112,27 @@ model Learning {
   resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
   level      String? // beginner | intermediate | advanced
   format     String? // course | tutorial | papers | video | guide
+}
+
+model Prompt {
+  id         String   @id @default(uuid())
+  resourceId String   @unique
+  resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  content    String? // 提示词正文
+  model      String? // 目标模型，如 GPT-4o / Claude
+  author     String?
+  variables  String   @default("[]") // JSON 数组：模板变量名
+}
+
+model Dataset {
+  id         String   @id @default(uuid())
+  resourceId String   @unique
+  resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  format     String? // csv | json | parquet | sql | …
+  rows       Int?
+  license    String?
+  source     String? // Hugging Face / Kaggle / …
+  columns    String   @default("[]") // JSON 数组：列/字段名
 }
 
 model Favorite {

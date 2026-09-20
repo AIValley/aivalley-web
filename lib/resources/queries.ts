@@ -10,6 +10,8 @@ const specInclude = {
   agent: true,
   skill: true,
   learning: true,
+  prompt: true,
+  dataset: true,
   _count: { select: { favorites: true } },
 } as const;
 
@@ -59,6 +61,34 @@ function specFromRow(row: ResourceWithSpec): ResourceSpec | null {
             author: row.skill.author ?? undefined,
             version: row.skill.version ?? undefined,
             trigger: row.skill.trigger ?? undefined,
+            githubRepo: row.skill.githubRepo ?? undefined,
+            summaryEn: row.skill.summaryEn ?? undefined,
+            summaryZh: row.skill.summaryZh ?? undefined,
+            skillMd: row.skill.skillMd ?? undefined,
+            files: stringArray(parseJson(row.skill.files, [])),
+            versions: stringArray(parseJson(row.skill.versions, [])),
+            githubStars: row.skill.githubStars ?? null,
+            githubForks: row.skill.githubForks ?? null,
+            securityIndex: row.skill.securityIndex ?? null,
+          }
+        : null;
+    case "prompt":
+      return row.prompt
+        ? {
+            content: row.prompt.content ?? undefined,
+            model: row.prompt.model ?? undefined,
+            author: row.prompt.author ?? undefined,
+            variables: stringArray(parseJson(row.prompt.variables, [])),
+          }
+        : null;
+    case "dataset":
+      return row.dataset
+        ? {
+            format: row.dataset.format ?? undefined,
+            rows: row.dataset.rows ?? null,
+            license: row.dataset.license ?? undefined,
+            source: row.dataset.source ?? undefined,
+            columns: stringArray(parseJson(row.dataset.columns, [])),
           }
         : null;
     case "learning":
@@ -149,6 +179,39 @@ export async function getRelatedResources(
         id: { not: resource.id },
         OR: [{ type: resource.type }, { category: resource.category }],
       },
+      orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
+      take: limit,
+      include: specInclude,
+    }),
+    getTaxonomy(),
+  ]);
+  return rows.map((r) => toDto(r, taxonomy));
+}
+
+export async function getRelatedSkills(
+  resourceId: string,
+  limit = 6
+): Promise<Resource[]> {
+  const [rows, taxonomy] = await Promise.all([
+    prisma.resource.findMany({
+      where: { status: "PUBLISHED", type: "skill", id: { not: resourceId } },
+      orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
+      take: limit,
+      include: specInclude,
+    }),
+    getTaxonomy(),
+  ]);
+  return rows.map((r) => toDto(r, taxonomy));
+}
+
+export async function getRelatedByType(
+  resourceId: string,
+  type: string,
+  limit = 6
+): Promise<Resource[]> {
+  const [rows, taxonomy] = await Promise.all([
+    prisma.resource.findMany({
+      where: { status: "PUBLISHED", type, id: { not: resourceId } },
       orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
       take: limit,
       include: specInclude,

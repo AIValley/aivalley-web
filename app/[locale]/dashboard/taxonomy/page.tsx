@@ -2,17 +2,22 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { getCurrentUser } from "@/lib/auth";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { getTaxonomy } from "@/lib/resources/options";
+import { getTaxonomy, isEnumKind } from "@/lib/resources/options";
 import { TaxonomyClient } from "@/components/dashboard/taxonomy-client";
 
 export default async function DashboardTaxonomyPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : "zh";
   const t = await getTranslations({ locale });
+  const sp = await searchParams;
+  const initialKind =
+    typeof sp.kind === "string" && isEnumKind(sp.kind) ? sp.kind : "type";
 
   const user = await getCurrentUser();
   if (!user || user.role !== "ADMIN") {
@@ -39,7 +44,7 @@ export default async function DashboardTaxonomyPage({
           {t("dashboard.taxonomy.subtitle")}
         </p>
       </div>
-      <TaxonomyClient taxonomy={taxonomy} />
+      <TaxonomyClient taxonomy={taxonomy} initialKind={initialKind} />
     </div>
   );
 }

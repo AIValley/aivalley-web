@@ -527,3 +527,66 @@ export async function deleteEnumOption(
   await prisma.enumOption.delete({ where: { id } });
   return { ok: true, message: t("dashboard.taxonomy.deleted") };
 }
+
+export async function reorderEnumOptions(
+  kind: string,
+  orderedIds: string[]
+): Promise<ActionResult> {
+  const user = await getCurrentUser();
+  if (!user || user.role !== "ADMIN") return { ok: false };
+  if (!isEnumKind(kind) || !Array.isArray(orderedIds)) return { ok: false };
+
+  // 按新次序重写每个选项的 sortOrder（从 1 开始递增），仅作用于同 kind 的选项
+  await prisma.$transaction(
+    orderedIds.map((id, index) =>
+      prisma.enumOption.updateMany({
+        where: { id, kind },
+        data: { sortOrder: index + 1 },
+      })
+    )
+  );
+  return { ok: true };
+}
+
+// ---------- 管理员：Skill GitHub 快照刷新 ----------
+
+export async function refreshSkillGithubStats(
+  resourceId: string
+): Promise<ActionResult & { githubStars?: number; githubForks?: number }> {
+  const user = await getCurrentUser();
+  if (!user || user.role !== "ADMIN") return { ok: false };
+
+  const skill = await prisma.skill.findUnique({ where: { resourceId } });
+  if (!skill?.githubRepo) return { ok: false };
+
+  const [owner, repo] = skill.githubRepo.split("/");
+  if (!owner || !repo) return { ok: false };
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+      headers: {
+        Accept: "application/vnd.github+json",
+        ...(process.env.GITHUB_TOKEN
+          ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
+          : {}),
+      },
+      cache: "no-store",
+    });
+    if (!res.ok) return { ok: false };
+
+    const data = (await res.json()) as {
+      stargazers_count?: number;
+      forks_count?: number;
+    };
+    const githubStars = data.stargazers_count ?? 0;
+    const githubForks = data.forks_count ?? 0;
+
+    await prisma.skill.update({
+      where: { resourceId },
+      data: { githubStars, githubForks },
+    });
+    return { ok: true, githubStars, githubForks };
+  } catch {
+    return { ok: false };
+  }
+}

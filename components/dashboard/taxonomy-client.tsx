@@ -1,11 +1,32 @@
 "use client";
 
 import { useEffect, useActionState, useRef, useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import { GripVertical, HelpCircle } from "lucide-react";
+import {
+  DndContext,
+  KeyboardSensor,
+  PointerSensor,
+  closestCenter,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+  type DraggableAttributes,
+  type DraggableSyntheticListeners,
+} from "@dnd-kit/core";
+import {
+  SortableContext,
+  arrayMove,
+  sortableKeyboardCoordinates,
+  useSortable,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import {
   createEnumOption,
   deleteEnumOption,
+  reorderEnumOptions,
   updateEnumOption,
   type ActionResult,
 } from "@/lib/actions";
@@ -129,19 +150,68 @@ function OptionForm({
   );
 }
 
+function SortableOption({
+  option,
+  disabled,
+  children,
+}: {
+  option: EnumOptionDto;
+  disabled: boolean;
+  children: (handle: {
+    attributes: DraggableAttributes;
+    listeners: DraggableSyntheticListeners;
+  }) => React.ReactNode;
+}) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
+    useSortable({ id: option.id, disabled });
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={{
+        transform: CSS.Transform.toString(transform),
+        transition,
+      }}
+      className={cn(
+        "glass rounded-xl p-4",
+        isDragging && "relative z-10 opacity-90 ring-2 ring-primary/40"
+      )}
+    >
+      {children({ attributes, listeners })}
+    </div>
+  );
+}
+
 export function TaxonomyClient({
   taxonomy,
+  initialKind = "type",
 }: {
   taxonomy: Record<EnumKind, EnumOptionDto[]>;
+  initialKind?: EnumKind;
 }) {
   const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
   const [, startTransition] = useTransition();
 
-  const [kind, setKind] = useState<EnumKind>("type");
+  const [kind, setKind] = useState<EnumKind>(initialKind);
   const [creating, setCreating] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [ordered, setOrdered] = useState<EnumOptionDto[]>(() => taxonomy.type);
+  const [prevSync, setPrevSync] = useState({ kind, taxonomy });
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 4 } }),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
+  );
+
+  // 切换 kind 或服务端数据刷新后，重置本地排序为最新数据
+  // （React 官方推荐的「根据 prop 调整 state」写法，避免在 effect 中 setState）
+  if (prevSync.kind !== kind || prevSync.taxonomy !== taxonomy) {
+    setPrevSync({ kind, taxonomy });
+    setOrdered(taxonomy[kind]);
+  }
 
   function run(fn: () => Promise<unknown>) {
     startTransition(async () => {
@@ -154,31 +224,51 @@ export function TaxonomyClient({
     setKind(next);
     setCreating(false);
     setEditingId(null);
+    router.replace(`${pathname}?kind=${next}`, { scroll: false });
   }
 
-  const options = taxonomy[kind];
+  function handleDragEnd(event: DragEndEvent) {
+    const { active, over } = event;
+    if (!over || active.id === over.id) return;
+    const oldIndex = ordered.findIndex((o) => o.id === active.id);
+    const newIndex = ordered.findIndex((o) => o.id === over.id);
+    if (oldIndex === -1 || newIndex === -1) return;
+    const next = arrayMove(ordered, oldIndex, newIndex);
+    setOrdered(next);
+    run(() => reorderEnumOptions(kind, next.map((o) => o.id)));
+  }
+
+  const options = ordered;
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap gap-2">
+      <div className="flex items-center gap-1 border-b border-border">
         {ENUM_KINDS.map((k) => (
           <button
             key={k}
             type="button"
             onClick={() => switchKind(k)}
+            aria-pressed={kind === k}
             className={cn(
-              "rounded-lg border px-3 py-1.5 text-sm transition-colors",
+              "relative px-4 py-2 text-sm font-medium transition-colors",
               kind === k
-                ? "border-primary/50 bg-primary/15 text-foreground"
-                : "border-border text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
+                ? "text-foreground"
+                : "text-muted-foreground hover:text-foreground"
             )}
           >
             {t(`dashboard.taxonomy.kinds.${k}`)}
+            {kind === k && (
+              <span className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-primary" />
+            )}
           </button>
         ))}
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between gap-3">
+        <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+          <HelpCircle className="size-3.5" />
+          {t("dashboard.taxonomy.dragHint")}
+        </p>
         <Button
           onClick={() => {
             setCreating((v) => !v);
@@ -205,62 +295,89 @@ export function TaxonomyClient({
         </div>
       )}
 
-      <div className="space-y-3">
-        {options.map((o) => (
-          <div key={o.id} className="glass rounded-xl p-4">
-            {editingId === o.id ? (
-              <OptionForm
-                kind={kind}
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragEnd={handleDragEnd}
+      >
+        <SortableContext
+          items={options.map((o) => o.id)}
+          strategy={verticalListSortingStrategy}
+        >
+          <div className="space-y-3">
+            {options.map((o) => (
+              <SortableOption
+                key={o.id}
                 option={o}
-                action={updateEnumOption}
-                submitLabel={t("dashboard.taxonomy.save")}
-                onSuccess={() => {
-                  setEditingId(null);
-                  router.refresh();
-                }}
-              />
-            ) : (
-              <div className="flex items-center justify-between gap-3">
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="font-medium text-foreground">
-                      {optionLabel(locale, o.labelI18n, o.value)}
-                    </span>
-                    <code className="rounded bg-foreground/10 px-1.5 py-0.5 text-xs text-muted-foreground">
-                      {o.value}
-                    </code>
-                    {!o.active && (
-                      <span className="text-xs text-muted-foreground">
-                        · {t("dashboard.taxonomy.active")}: ✕
-                      </span>
-                    )}
-                  </div>
-                  <p className="mt-0.5 text-xs text-muted-foreground">
-                    {t("dashboard.taxonomy.sortOrder")}: {o.sortOrder}
-                  </p>
-                </div>
-                <div className="flex shrink-0 gap-2">
-                  <button
-                    onClick={() => setEditingId(o.id)}
-                    className="rounded-lg border border-border px-3 py-1.5 text-xs text-foreground transition-colors hover:bg-foreground/5"
-                  >
-                    {t("dashboard.taxonomy.edit")}
-                  </button>
-                  <button
-                    onClick={() => {
-                      if (window.confirm(t("dashboard.taxonomy.confirmDelete")))
-                        run(() => deleteEnumOption(o.id, locale));
-                    }}
-                    className="rounded-lg border border-rose-400/30 px-3 py-1.5 text-xs text-rose-300 transition-colors hover:bg-rose-400/10"
-                  >
-                    {t("dashboard.taxonomy.delete")}
-                  </button>
-                </div>
-              </div>
-            )}
+                disabled={editingId === o.id}
+              >
+                {({ attributes, listeners }) =>
+                  editingId === o.id ? (
+                    <OptionForm
+                      kind={kind}
+                      option={o}
+                      action={updateEnumOption}
+                      submitLabel={t("dashboard.taxonomy.save")}
+                      onSuccess={() => {
+                        setEditingId(null);
+                        router.refresh();
+                      }}
+                    />
+                  ) : (
+                    <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        {...attributes}
+                        {...listeners}
+                        aria-label={t("dashboard.taxonomy.dragHint")}
+                        title={t("dashboard.taxonomy.dragHint")}
+                        className="shrink-0 cursor-grab text-muted-foreground transition-colors hover:text-foreground active:cursor-grabbing touch-none"
+                      >
+                        <GripVertical className="size-4" />
+                      </button>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium text-foreground">
+                            {optionLabel(locale, o.labelI18n, o.value)}
+                          </span>
+                          <code className="rounded bg-foreground/10 px-1.5 py-0.5 text-xs text-muted-foreground">
+                            {o.value}
+                          </code>
+                          {!o.active && (
+                            <span className="text-xs text-muted-foreground">
+                              · {t("dashboard.taxonomy.active")}: ✕
+                            </span>
+                          )}
+                        </div>
+                        <p className="mt-0.5 text-xs text-muted-foreground">
+                          {t("dashboard.taxonomy.sortOrder")}: {o.sortOrder}
+                        </p>
+                      </div>
+                      <div className="flex shrink-0 gap-2">
+                        <button
+                          onClick={() => setEditingId(o.id)}
+                          className="rounded-lg border border-border px-3 py-1.5 text-xs text-foreground transition-colors hover:bg-foreground/5"
+                        >
+                          {t("dashboard.taxonomy.edit")}
+                        </button>
+                        <button
+                          onClick={() => {
+                            if (window.confirm(t("dashboard.taxonomy.confirmDelete")))
+                              run(() => deleteEnumOption(o.id, locale));
+                          }}
+                          className="rounded-lg border border-rose-400/30 px-3 py-1.5 text-xs text-rose-300 transition-colors hover:bg-rose-400/10"
+                        >
+                          {t("dashboard.taxonomy.delete")}
+                        </button>
+                      </div>
+                    </div>
+                  )
+                }
+              </SortableOption>
+            ))}
           </div>
-        ))}
-      </div>
+        </SortableContext>
+      </DndContext>
     </div>
   );
 }

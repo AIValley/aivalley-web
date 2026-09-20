@@ -88,6 +88,36 @@ export const TYPE_SEED: SeedOption[] = [
       de: "SKILLs",
     },
   },
+  {
+    value: "prompt",
+    sortOrder: 6,
+    labelI18n: {
+      zh: "提示词",
+      "zh-TW": "提示詞",
+      en: "Prompts",
+      ja: "プロンプト",
+      ru: "Промпты",
+      ko: "프롬프트",
+      es: "Prompts",
+      fr: "Prompts",
+      de: "Prompts",
+    },
+  },
+  {
+    value: "dataset",
+    sortOrder: 7,
+    labelI18n: {
+      zh: "数据集",
+      "zh-TW": "資料集",
+      en: "DataSets",
+      ja: "データセット",
+      ru: "Датасеты",
+      ko: "데이터셋",
+      es: "Conjuntos de datos",
+      fr: "Jeux de données",
+      de: "Datensätze",
+    },
+  },
 ];
 
 export const CATEGORY_SEED: SeedOption[] = [

@@ -18,7 +18,8 @@ export function HeaderNav({
   const pathname = usePathname();
 
   function isActive(type: string): boolean {
-    return pathname === `/${locale}${typePath(type)}`;
+    const base = `/${locale}${typePath(type)}`;
+    return pathname === base || pathname.startsWith(`${base}/`);
   }
 
   return (

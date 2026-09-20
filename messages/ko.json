@@ -80,6 +80,34 @@
     "empty": "아직 저장한 리소스가 없습니다. 탐색 페이지를 둘러보세요.",
     "browse": "탐색하기"
   },
+  "skill": {
+    "github": "GitHub 저장소",
+    "summary": "요약",
+    "summaryEn": "요약 (영어)",
+    "summaryZh": "요약 (중국어)",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "파일",
+      "versions": "버전"
+    },
+    "related": "관련 스킬",
+    "stars": "스타",
+    "forks": "포크",
+    "securityIndex": "보안 지수",
+    "refresh": "새로고침",
+    "emptySkillMd": "SKILL.md 내용이 없습니다",
+    "emptyFiles": "파일 목록이 없습니다",
+    "emptyVersions": "버전 기록이 없습니다"
+  },
+  "prompt": {
+    "content": "프롬프트",
+    "variables": "변수",
+    "related": "관련 프롬프트"
+  },
+  "dataset": {
+    "columns": "컬럼",
+    "related": "관련 데이터셋"
+  },
   "submit": {
     "title": "리소스 제출",
     "subtitle": "등록할 가치가 있는 AI 리소스를 추천해 주세요. 검토 후 게시됩니다.",
@@ -110,7 +138,14 @@
     "version": "버전",
     "trigger": "트리거",
     "level": "난이도",
-    "format": "형식"
+    "format": "형식",
+    "content": "프롬프트 내용",
+    "model": "대상 모델",
+    "variables": "템플릿 변수",
+    "rows": "레코드 수",
+    "license": "라이선스",
+    "source": "출처",
+    "columns": "컬럼 / 필드"
   },
   "blog": {
     "title": "블로그 · 소식",
@@ -247,6 +282,7 @@
       "value": "값",
       "valueHint": "고유 식별자(예: tool, chat, free), 생성 후 수정할 수 없음",
       "sortOrder": "정렬 순서",
+      "dragHint": "핸들을 드래그하여 순서 변경",
       "active": "활성화",
       "labels": "다국어 라벨",
       "confirmDelete": "이 옵션을 삭제할까요?",

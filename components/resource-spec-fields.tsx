@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 import {
   AGENT_KINDS,
   LEARNING_FORMATS,
@@ -50,7 +51,7 @@ export function ResourceSpecFields({
 }) {
   const t = useTranslations();
 
-  if (!["tool", "model", "agent", "skill", "learning"].includes(type)) return null;
+  if (!["tool", "model", "agent", "skill", "learning", "prompt", "dataset"].includes(type)) return null;
 
   return (
     <div className="space-y-4 border-t border-border pt-4">
@@ -124,18 +125,67 @@ export function ResourceSpecFields({
       )}
 
       {type === "skill" && (
-        <div className="grid gap-4 sm:grid-cols-3">
-          <div className="space-y-1.5">
-            <Label>{t("submit.author")}</Label>
-            <Input name="spec_author" defaultValue={spec?.author ?? ""} placeholder="Anthropic" />
+        <div className="space-y-4">
+          <div className="grid gap-4 sm:grid-cols-3">
+            <div className="space-y-1.5">
+              <Label>{t("submit.author")}</Label>
+              <Input name="spec_author" defaultValue={spec?.author ?? ""} placeholder="Anthropic" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("submit.version")}</Label>
+              <Input name="spec_version" defaultValue={spec?.version ?? ""} placeholder="1.0" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("submit.trigger")}</Label>
+              <Input name="spec_trigger" defaultValue={spec?.trigger ?? ""} placeholder="/skill" />
+            </div>
           </div>
+
           <div className="space-y-1.5">
-            <Label>{t("submit.version")}</Label>
-            <Input name="spec_version" defaultValue={spec?.version ?? ""} placeholder="1.0" />
+            <Label>{t("skill.github")}</Label>
+            <Input name="spec_githubRepo" defaultValue={spec?.githubRepo ?? ""} placeholder="owner/repo" />
           </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <Label>{t("skill.summaryEn")}</Label>
+              <Textarea name="spec_summaryEn" defaultValue={spec?.summaryEn ?? ""} placeholder="A short summary of what this skill does." />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("skill.summaryZh")}</Label>
+              <Textarea name="spec_summaryZh" defaultValue={spec?.summaryZh ?? ""} placeholder="该技能作用的简要说明。" />
+            </div>
+          </div>
+
           <div className="space-y-1.5">
-            <Label>{t("submit.trigger")}</Label>
-            <Input name="spec_trigger" defaultValue={spec?.trigger ?? ""} placeholder="/skill" />
+            <Label>{t("skill.tabs.skillMd")}</Label>
+            <Textarea name="spec_skillMd" defaultValue={spec?.skillMd ?? ""} rows={8} placeholder="# SKILL.md" />
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <Label>{t("skill.tabs.files")}</Label>
+              <Textarea name="spec_files" defaultValue={spec?.files?.join("\n") ?? ""} placeholder={"SKILL.md\nLICENSE\nscripts/vet.py"} />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("skill.tabs.versions")}</Label>
+              <Textarea name="spec_versions" defaultValue={spec?.versions?.join("\n") ?? ""} placeholder={"1.0.0\n0.9.0"} />
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            <div className="space-y-1.5">
+              <Label>{t("skill.stars")}</Label>
+              <Input name="spec_githubStars" type="number" defaultValue={spec?.githubStars != null ? spec.githubStars : ""} placeholder="0" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("skill.forks")}</Label>
+              <Input name="spec_githubForks" type="number" defaultValue={spec?.githubForks != null ? spec.githubForks : ""} placeholder="0" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("skill.securityIndex")}</Label>
+              <Input name="spec_securityIndex" type="number" defaultValue={spec?.securityIndex != null ? spec.securityIndex : ""} placeholder="0–100" />
+            </div>
           </div>
         </div>
       )}
@@ -163,6 +213,56 @@ export function ResourceSpecFields({
                 </option>
               ))}
             </select>
+          </div>
+        </div>
+      )}
+
+      {type === "prompt" && (
+        <div className="space-y-4">
+          <div className="space-y-1.5">
+            <Label>{t("submit.content")}</Label>
+            <Textarea name="spec_content" defaultValue={spec?.content ?? ""} rows={8} placeholder="You are a helpful…" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <Label>{t("submit.model")}</Label>
+              <Input name="spec_model" defaultValue={spec?.model ?? ""} placeholder="GPT-4o / Claude" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("submit.author")}</Label>
+              <Input name="spec_author" defaultValue={spec?.author ?? ""} placeholder="Anthropic" />
+            </div>
+          </div>
+          <div className="space-y-1.5">
+            <Label>{t("submit.variables")}</Label>
+            <Textarea name="spec_variables" defaultValue={spec?.variables?.join("\n") ?? ""} placeholder={"{{topic}}\n{{tone}}"} />
+          </div>
+        </div>
+      )}
+
+      {type === "dataset" && (
+        <div className="space-y-4">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <Label>{t("submit.format")}</Label>
+              <Input name="spec_format" defaultValue={spec?.format ?? ""} placeholder="csv / json / parquet" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("submit.rows")}</Label>
+              <Input name="spec_rows" type="number" defaultValue={spec?.rows != null ? spec.rows : ""} placeholder="1000000" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("submit.license")}</Label>
+              <Input name="spec_license" defaultValue={spec?.license ?? ""} placeholder="MIT / CC-BY-4.0" />
+            </div>
+            <div className="space-y-1.5">
+              <Label>{t("submit.source")}</Label>
+              <Input name="spec_source" defaultValue={spec?.source ?? ""} placeholder="Hugging Face / Kaggle" />
+            </div>
+          </div>
+          <div className="space-y-1.5">
+            <Label>{t("submit.columns")}</Label>
+            <Textarea name="spec_columns" defaultValue={spec?.columns?.join("\n") ?? ""} placeholder={"id\nprompt\nresponse"} />
           </div>
         </div>
       )}

@@ -80,6 +80,34 @@
     "empty": "まだリソースを保存していません。探索ページを見てみましょう。",
     "browse": "探索へ"
   },
+  "skill": {
+    "github": "GitHub リポジトリ",
+    "summary": "概要",
+    "summaryEn": "概要（英語）",
+    "summaryZh": "概要（中国語）",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "ファイル",
+      "versions": "バージョン"
+    },
+    "related": "関連スキル",
+    "stars": "スター",
+    "forks": "フォーク",
+    "securityIndex": "セキュリティ指数",
+    "refresh": "更新",
+    "emptySkillMd": "SKILL.md の内容がありません",
+    "emptyFiles": "ファイルはありません",
+    "emptyVersions": "バージョン履歴はありません"
+  },
+  "prompt": {
+    "content": "プロンプト",
+    "variables": "変数",
+    "related": "関連プロンプト"
+  },
+  "dataset": {
+    "columns": "カラム",
+    "related": "関連データセット"
+  },
   "submit": {
     "title": "リソースを投稿",
     "subtitle": "収録に値する AI リソースを推薦。審査通過後に公開されます。",
@@ -110,7 +138,14 @@
     "version": "バージョン",
     "trigger": "トリガー",
     "level": "難易度",
-    "format": "形式"
+    "format": "形式",
+    "content": "プロンプト本文",
+    "model": "対象モデル",
+    "variables": "テンプレート変数",
+    "rows": "レコード数",
+    "license": "ライセンス",
+    "source": "提供元",
+    "columns": "カラム / フィールド"
   },
   "blog": {
     "title": "ブログ · ニュース",
@@ -247,6 +282,7 @@
       "value": "値",
       "valueHint": "一意の識別子（tool、chat、free など）。作成後は変更できません",
       "sortOrder": "並び順",
+      "dragHint": "ハンドルをドラッグして並べ替え",
       "active": "有効",
       "labels": "多言語ラベル",
       "confirmDelete": "このオプションを削除しますか？",

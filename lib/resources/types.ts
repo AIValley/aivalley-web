@@ -1,6 +1,6 @@
 import type { ResourceSpec } from "./spec";
 
-export type ResourceType = "tool" | "model" | "agent" | "learning" | "skill";
+export type ResourceType = "tool" | "model" | "agent" | "learning" | "skill" | "prompt" | "dataset";
 export type Pricing = "free" | "freemium" | "paid";
 export type ResourceStatus = "PUBLISHED" | "PENDING" | "REJECTED";
 
@@ -13,6 +13,8 @@ export const RESOURCE_TYPES: ResourceType[] = [
   "agent",
   "skill",
   "learning",
+  "prompt",
+  "dataset",
 ];
 
 export const PRICINGS: Pricing[] = ["free", "freemium", "paid"];

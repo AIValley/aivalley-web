@@ -5,7 +5,7 @@ import { getFavoriteIds, getPublishedResources } from "@/lib/resources/queries";
 import { getTaxonomy } from "@/lib/resources/options";
 import { ExploreClient } from "@/components/explore-client";
 
-export default async function ToolsPage({
+export default async function DatasetsPage({
   params,
   searchParams,
 }: {
@@ -30,7 +30,7 @@ export default async function ToolsPage({
   const initialType =
     typeof sp.type === "string" && typeValues.includes(sp.type)
       ? sp.type
-      : "tool";
+      : "dataset";
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">

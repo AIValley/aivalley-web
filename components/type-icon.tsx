@@ -2,6 +2,8 @@ import {
   BookOpen,
   Bot,
   Brain,
+  Database,
+  MessageSquare,
   Wand2,
   Wrench,
   type LucideIcon,
@@ -13,6 +15,8 @@ const TYPE_ICONS: Record<string, LucideIcon> = {
   agent: Bot,
   learning: BookOpen,
   skill: Wand2,
+  prompt: MessageSquare,
+  dataset: Database,
 };
 
 /** 资源类型的 SVG 图标（替代 emoji），语义装饰性，故 aria-hidden；未知类型回退通用图标 */

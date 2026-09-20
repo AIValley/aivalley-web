@@ -136,6 +136,11 @@
     animation: gradient-x 6s ease infinite;
   }
 
+  /* 页面背景光晕：仅深色主题显示，浅色主题保持纯白背景 */
+  [data-theme="light"] .bg-glow {
+    opacity: 0;
+  }
+
   /* 玻璃拟态卡片 */
   .glass {
     background-color: var(--glass-bg);

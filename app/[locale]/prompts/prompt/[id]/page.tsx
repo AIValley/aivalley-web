@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getResourceById } from "@/lib/resources/queries";
-import { SkillDetail } from "@/components/skill-detail";
+import { PromptDetail } from "@/components/prompt-detail";
 
-export default async function SkillDetailPage({
+export default async function PromptDetailPage({
   params,
 }: {
   params: Promise<{ locale: string; id: string }>;
@@ -12,13 +12,13 @@ export default async function SkillDetailPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : "zh";
 
   const resource = await getResourceById(id);
-  if (!resource || resource.type !== "skill") notFound();
+  if (!resource || resource.type !== "prompt") notFound();
 
   return (
-    <SkillDetail
+    <PromptDetail
       resource={resource}
       locale={locale}
-      backHref={`/${locale}/skills`}
+      backHref={`/${locale}/prompts`}
     />
   );
 }

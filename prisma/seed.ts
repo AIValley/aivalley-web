@@ -60,6 +60,8 @@ async function main() {
   await prisma.agent.deleteMany();
   await prisma.skill.deleteMany();
   await prisma.learning.deleteMany();
+  await prisma.prompt.deleteMany();
+  await prisma.dataset.deleteMany();
   await prisma.resource.deleteMany();
   for (const r of seedResources) {
     const id = randomUUID();
@@ -84,7 +86,7 @@ async function main() {
           status: "PUBLISHED",
         },
       });
-      await syncSpec(tx, id, r.type, {});
+      await syncSpec(tx, id, r.type, r.spec ?? {});
     });
   }
   console.log(`✅ 已填充 ${seedResources.length} 条资源`);

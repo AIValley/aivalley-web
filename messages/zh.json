@@ -80,6 +80,34 @@
     "empty": "还没有收藏任何资源，去浏览页看看吧。",
     "browse": "去浏览"
   },
+  "skill": {
+    "github": "GitHub 仓库",
+    "summary": "简介",
+    "summaryEn": "简介（英文）",
+    "summaryZh": "简介（中文）",
+    "tabs": {
+      "skillMd": "SKILL.md",
+      "files": "文件",
+      "versions": "版本"
+    },
+    "related": "相关 Skill",
+    "stars": "Stars",
+    "forks": "Forks",
+    "securityIndex": "安全指数",
+    "refresh": "刷新",
+    "emptySkillMd": "暂无 SKILL.md 内容",
+    "emptyFiles": "暂无文件列表",
+    "emptyVersions": "暂无版本记录"
+  },
+  "prompt": {
+    "content": "提示词",
+    "variables": "模板变量",
+    "related": "相关 Prompt"
+  },
+  "dataset": {
+    "columns": "字段",
+    "related": "相关数据集"
+  },
   "submit": {
     "title": "提交资源",
     "subtitle": "推荐一个值得收录的 AI 资源，审核通过后会上架。",
@@ -110,7 +138,14 @@
     "version": "版本",
     "trigger": "触发方式",
     "level": "难度",
-    "format": "形态"
+    "format": "形态",
+    "content": "提示词内容",
+    "model": "目标模型",
+    "variables": "模板变量",
+    "rows": "记录数",
+    "license": "许可协议",
+    "source": "数据来源",
+    "columns": "列 / 字段"
   },
   "blog": {
     "title": "博客 · 资讯",
@@ -247,6 +282,7 @@
       "value": "值",
       "valueHint": "唯一标识（如 tool、chat、free），创建后不可修改",
       "sortOrder": "排序",
+      "dragHint": "拖动左侧手柄可调整排序",
       "active": "启用",
       "labels": "多语言标签",
       "confirmDelete": "确定删除该选项吗？",

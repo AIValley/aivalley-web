@@ -23,6 +23,24 @@ export interface ResourceSpec {
   author?: string;
   version?: string;
   trigger?: string;
+  githubRepo?: string;
+  summaryEn?: string;
+  summaryZh?: string;
+  skillMd?: string;
+  files?: string[];
+  versions?: string[];
+  githubStars?: number | null;
+  githubForks?: number | null;
+  securityIndex?: number | null;
+  // prompt（author 复用上方 skill 的 author）
+  content?: string;
+  model?: string; // 目标模型（与 "model" 资源类型同名，但此处是 prompt 的目标模型）
+  variables?: string[];
+  // dataset（format 复用上方 learning 的 format）
+  rows?: number | null;
+  license?: string;
+  source?: string;
+  columns?: string[];
   // learning
   level?: string;
   format?: string;
@@ -51,6 +69,14 @@ function list(vals: FormDataEntryValue[]): string[] {
     .filter(Boolean);
 }
 
+function lines(v: FormDataEntryValue | null): string[] {
+  const s = typeof v === "string" ? v : "";
+  return s
+    .split(/\r?\n/)
+    .map((x) => x.trim())
+    .filter(Boolean);
+}
+
 /** 从 formData 读取某类型的专属字段（type 决定读哪些字段） */
 export function parseSpecInput(formData: FormData, type: string): ResourceSpec {
   switch (type) {
@@ -76,6 +102,30 @@ export function parseSpecInput(formData: FormData, type: string): ResourceSpec {
         author: str(formData.get("spec_author")),
         version: str(formData.get("spec_version")),
         trigger: str(formData.get("spec_trigger")),
+        githubRepo: str(formData.get("spec_githubRepo")),
+        summaryEn: str(formData.get("spec_summaryEn")),
+        summaryZh: str(formData.get("spec_summaryZh")),
+        skillMd: str(formData.get("spec_skillMd")),
+        files: lines(formData.get("spec_files")),
+        versions: lines(formData.get("spec_versions")),
+        githubStars: num(formData.get("spec_githubStars")),
+        githubForks: num(formData.get("spec_githubForks")),
+        securityIndex: num(formData.get("spec_securityIndex")),
+      };
+    case "prompt":
+      return {
+        content: str(formData.get("spec_content")),
+        model: str(formData.get("spec_model")),
+        author: str(formData.get("spec_author")),
+        variables: lines(formData.get("spec_variables")),
+      };
+    case "dataset":
+      return {
+        format: str(formData.get("spec_format")),
+        rows: num(formData.get("spec_rows")),
+        license: str(formData.get("spec_license")),
+        source: str(formData.get("spec_source")),
+        columns: lines(formData.get("spec_columns")),
       };
     case "learning":
       return {
@@ -102,6 +152,8 @@ export async function syncSpec(
   await tx.agent.deleteMany({ where: { resourceId } });
   await tx.skill.deleteMany({ where: { resourceId } });
   await tx.learning.deleteMany({ where: { resourceId } });
+  await tx.prompt.deleteMany({ where: { resourceId } });
+  await tx.dataset.deleteMany({ where: { resourceId } });
 
   switch (type) {
     case "tool":
@@ -140,6 +192,38 @@ export async function syncSpec(
           author: spec.author ?? null,
           version: spec.version ?? null,
           trigger: spec.trigger ?? null,
+          githubRepo: spec.githubRepo ?? null,
+          summaryEn: spec.summaryEn ?? null,
+          summaryZh: spec.summaryZh ?? null,
+          skillMd: spec.skillMd ?? null,
+          files: JSON.stringify(spec.files ?? []),
+          versions: JSON.stringify(spec.versions ?? []),
+          githubStars: spec.githubStars ?? null,
+          githubForks: spec.githubForks ?? null,
+          securityIndex: spec.securityIndex ?? null,
+        },
+      });
+      break;
+    case "prompt":
+      await tx.prompt.create({
+        data: {
+          resourceId,
+          content: spec.content ?? null,
+          model: spec.model ?? null,
+          author: spec.author ?? null,
+          variables: JSON.stringify(spec.variables ?? []),
+        },
+      });
+      break;
+    case "dataset":
+      await tx.dataset.create({
+        data: {
+          resourceId,
+          format: spec.format ?? null,
+          rows: spec.rows ?? null,
+          license: spec.license ?? null,
+          source: spec.source ?? null,
+          columns: JSON.stringify(spec.columns ?? []),
         },
       });
       break;
